@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body{
+    background-color: rgb(40, 40, 43);
+    font-family: Montserrat;
+    color: white;
+}
+
+.top{
+    background-image: url(/materials/wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 40rem;
+    border-bottom: 0.5rem solid rgba(216, 30, 91, 1);
+}
+
+.top::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.content{
+    position: relative;
+    z-index: 1;
+    align-items: center;
+
+}
+
+.top-bar{
+    position:relative;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sign-in-button{
+    background-color: rgba(216, 30, 91, 0.7);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: 550;
+    font-size: normal;
+    padding: 8px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.sign-in-button:hover{
+    background-color: rgba(216, 30, 91, 1);
+
+}
+.logo img{
+    height: 4rem;
+    padding: 1rem;
+}
+
+.middle{
+    margin: 10rem;
+    text-align: center;
+    font-size: small;
+}
+.email{
+    margin: 1rem;
+}
+.register-button{
+
+    background-color: rgba(216, 30, 91, 1);
+    border: none;
+    color: white;
+    font-weight: 550;
+    font-size: normal;
+    padding: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 1rem;
+    height: 2rem;
+
+}
+.register-button:hover{
+    background-color: rgba(216, 30, 91, 0.7);
+}
+
+.email-box{
+    height : 2rem;
+    width: 15rem;
+    border: 2px solid rgba(216, 30, 91, 1);
+    background-color: rgba(40, 40, 43, 0.8);
+}
+
+.email-box::placeholder {
+    color: white;
+    padding: 5px;
+}
+
+.first-pannel{
+    display: flex;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 0.5rem solid rgba(216, 30, 91, 1);
+
+}
+
+.first-pannel img{
+    width: 30rem;
+    border-radius: 10px;
+}
+
+.first-pannel h1{
+    text-align: center;
+    font-size: 45px;
+}
+
