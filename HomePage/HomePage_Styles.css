@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body{
+    background-color: black;
+    font-family: Montserrat;
+    color: white;;
+}
+
+.top {
+    justify-content: space-between;
+    background-color: #D81E5B;
+    display: flex;
+    align-content: center;
+    height: 50px;
+}
+
+.btn-container {
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+}
+.btn img {
+    width: 100px;
+    height: 50px;
+}
+.btn{
+    background-color: #D81E5B;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-content: center;
+    padding-right: 25px;
+}
+.search-bar {
+    width: 300px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+.search-bar::placeholder {
+    padding-left: 5px;
+}
+.search-btn img {
+    height: 25px;
+    width: 25px;
+}
+.search-btn {
+    padding: 2px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.ForYou, .TVShows {
+    padding: 30px 25px 0 25px;
+    font-weight: 600;
+}
+.CategoryTitle {
+    font-family: Montserrat;
+    padding-bottom: 15px;
+}
+.ForYouBar, .TVShowsBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+}
+.ForYouBar img, .TVShowsBar img {
+    width: 200px;
+    height: 275px;
+    border-radius: 4px 4px 4px 4px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border: 2px solid #D81E5B;
+}
+
+
