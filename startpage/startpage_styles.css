@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: rgb(40, 40, 43);
+    background-color: rgb(0,0,0,1);
     font-family: Montserrat;
     color: white;
 }
@@ -89,7 +89,7 @@ body{
 
 }
 .register-button:hover{
-    background-color: rgba(216, 30, 91, 0.7);
+    background-color: rgb(179, 25, 76);
 }
 
 .email-box{
@@ -97,6 +97,7 @@ body{
     width: 15rem;
     border: 2px solid rgba(216, 30, 91, 1);
     background-color: rgba(40, 40, 43, 0.8);
+    color: white;
 }
 
 .email-box::placeholder {
@@ -121,6 +122,61 @@ body{
 
 .first-pannel h1{
     text-align: center;
-    font-size: 45px;
+    font-size: 40px;
+}
+
+.second-pannel{
+    display: flex;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 0.5rem solid rgba(216, 30, 91, 1);
+}
+
+.second-pannel img{
+    width: 40rem;
+    border-radius: 10px;
+}
+
+.second-pannel h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+.second-pannel h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1rem;
+}
+
+
+.third-pannel{
+    display: flex;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 0.5rem solid rgba(216, 30, 91, 1);
+}
+
+.third-pannel img{
+    width: 40rem;
+    border-radius: 10px;
+}
+
+.third-pannel h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+.third-pannel h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1rem;
+
 }
 
