@@ -98,11 +98,11 @@ body{
     border: 2px solid rgba(216, 30, 91, 1);
     background-color: rgba(40, 40, 43, 0.8);
     color: white;
+    padding: 5px;
 }
 
 .email-box::placeholder {
     color: white;
-    padding: 5px;
 }
 
 .first-pannel{
@@ -112,6 +112,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     border-bottom: 0.5rem solid rgba(216, 30, 91, 1);
+    flex-wrap: wrap;
 
 }
 
@@ -132,6 +133,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     border-bottom: 0.5rem solid rgba(216, 30, 91, 1);
+    flex-wrap: wrap;
 }
 
 .second-pannel img{
@@ -159,6 +161,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     border-bottom: 0.5rem solid rgba(216, 30, 91, 1);
+    flex-wrap: wrap;
 }
 
 .third-pannel img{
@@ -178,5 +181,28 @@ body{
     font-weight: 300;
     margin: 1rem;
 
+}
+
+.footer{
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer h3{
+    font-size: 15px;
+    font-weight: 300;
+    padding-top: 5px;
+}
+.footer ul{
+    font-size: small;
+    text-decoration: none;
+    padding: 10px;
+}
+.footer h2{
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
