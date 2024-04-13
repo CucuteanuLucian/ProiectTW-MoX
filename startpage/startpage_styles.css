@@ -14,7 +14,7 @@ body{
 }
 
 .top{
-    background-image: url(/materials/wallpaper.jpg);
+    background-image: url(../materials/wallpaper.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
