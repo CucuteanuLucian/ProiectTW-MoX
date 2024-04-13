@@ -68,7 +68,7 @@ body{
     border-radius: 0 4px 4px 0;
 }
 
-.ForYou, .TVShows {
+.ForYou, .TVShows, .Movies {
     padding: 30px 25px 0 25px;
     font-weight: 600;
 }
@@ -76,13 +76,22 @@ body{
     font-family: Montserrat;
     padding-bottom: 15px;
 }
-.ForYouBar, .TVShowsBar {
+.ForYouBar, .TVShowsBar, .MoviesBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow-x: auto;
 }
-.ForYouBar img, .TVShowsBar img {
+.ForYouBar::-webkit-scrollbar {
+    display: none;
+}
+.TVShowsBar::-webkit-scrollbar {
+    display: none;
+}
+.MoviesBar::-webkit-scrollbar {
+    display: none;
+}
+.ForYouBar img, .TVShowsBar img, .MoviesBar img {
     width: 200px;
     height: 275px;
     border-radius: 4px 4px 4px 4px;
@@ -91,4 +100,12 @@ body{
     border: 2px solid #D81E5B;
 }
 
-
+.bottomLine {
+    margin-top: 25px;
+    height: 5px;
+    background-color: #D81E5B;
+}
+.bottom {
+    height: 150px;
+    background-color: black;
+}
