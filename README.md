@@ -339,42 +339,6 @@
                                                                            width=800>
                         </li>
                     </ul>
-                <li id="tests"><b>Pagina de chestionare</b></li>
-                <li style="list-style: none">
-                    <ul>
-                        <li>Pagina prezintă o lista de chestionare predefinite, la care se poate obține un punctaj maxim
-                            de 26 de răspunsuri
-                            corecte. Astfel, fiecare dintre chestionare are un status: <b>Eșuat</b>, <b>Neîncercat</b>
-                            și <b>Perfect</b>;
-                            acestea pot fi refăcute până la obținerea punctajului maxim.
-                        </li>
-                        <li>La momentul începerii unui chestionar, un cronometru de 30 de minute va porni, acesta
-                            constituind durata de
-                            rezolvare a testului. Testul va fi trecut dacă utilizatorul va răspunde la cel puțin 22 de
-                            întrebări corect,
-                            dar totodată nu se va opri dacă acesta acumulează mai mult de 4 răspunsuri greșite.
-                        </li>
-                        <li>Întrebările au 3 variante de răspuns, cu cel puțin unul corect la fiecare. Pentru a rezolva,
-                            se va(vor) bifa
-                            răspunsul(urile) corect(e) și se va apăsa butonul <b>Trimite răspunsul</b>, sau <b>Răspunde
-                                mai târziu</b>,
-                            dacă se dorește amânarea pe mai târziu a întrebării curente.
-                        </li>
-                        <li>La finalul completării testului, acesta își va schimbă statusul, dacă este cazul, și se va
-                            primi un mesaj
-                            conform căruia utilizatorul a trecut sau nu testul cu brio.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="streetSignsRomania"
-                                                                           src="images/testList.png" width=800
-                        ></li>
-                        <li class="pictures" style="list-style: none"><img alt="streetSignsRomaniaExamples"
-                                                                           src="images/testExample.png" width=800
-                        ></li>
-                        <li class="pictures" style="list-style: none"><img alt="streetSignsItaly"
-                                                                           src="images/testDone.png" width=800
-                        ></li>
-                    </ul>
-                </li>
                 <li id="about"><b>Pagina informativa</b></li>
                 <li style="list-style: none">
                     <ul>
@@ -382,7 +346,7 @@
                             tehnologii
                             utilizate, numele autorilor, scopul aplicației și bibliografia.
                         </li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/aboutPage.png" width=800>
+                        <li class="pictures" style="list-style: none">
                         </li>
                     </ul>
                 <li id="help"><b>Pagina de ajutor</b></li>
@@ -391,105 +355,9 @@
                         <li>Pagina are rolul de a prezenta câteva sfaturi pentru a putea beneficia de o experienta
                             completa pe site.
                         </li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/helpPage.png"
-                                                                           width=800
+                        <li class="pictures" style="list-style: none">
                         </li>
                     </ul>
-                <li id="profile"><b>Pagina de profil</b></li>
-                <li style="list-style: none">
-                    <ul>
-                        <li>Pagina prezintă informații despre utilizator.</li>
-                        <li>
-                            <img alt="overview" src="images/profile1.png" width=800>
-                        </li>
-                        <li>Utilizatorul <b>autentificat</b> își va vedea la profil detalii despre cont, un procent
-                            referitor la
-                            progresul sau, numărul de întrebări/chestionare parcurse (corecte și greșite), dar și câteva
-                            grafice
-                            corespunzătoare acestora.
-                        </li>
-                        <li>Mai mult, utilizatorul va avea la dispoziție un buton <b>Logout</b> prin care poate ieși din
-                            cont,
-                            dar is unul <b>Schimbă parolă</b>, în cazul în care își dorește acest lucru.
-                        </li>
-                        <li><img alt="overview" src="images/profile2.png" width=800></li>
-                        <li><img alt="overview" src="images/profile3.png" width=800></li>
-                        <li><img alt="overview" src="images/profile4.png" width=800></li>
-                    </ul>
-                </li>
-                <li id="error400"><b>Pagina 400</b></li>
-                <li style="list-style: none">
-                    <ul>
-                        <li>Pagina afișează eroarea <b>400 Cerere greșită</b>.</li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/error400.png"
-                                                                           width=800>
-                        </li>
-                    </ul>
-                </li>
-                <li id="error404"><b>Pagina 404</b></li>
-                <li style="list-style: none">
-                    <ul>
-                        <li>Pagina afișează eroarea <b>404 Cerere greșită</b>.</li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/error404.png"
-                                                                           width=800>
-                        </li>
-                    </ul>
-                </li>
-                <li id="admin"><b>Pagina Administratorului</b></li>
-                <li style="list-style: none">
-                    <ul>
-                        <li>Pagina afișează interfață pentru <b>adminstrator</b>.</li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/admin1.png"
-                                                                           width=800>
-                        </li>
-                        <li>Administratorul are capacitatea de a adaugă/modifică
-                            întrebări și/sau chestionare și de a șterge utilizatori din baza de date.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/admin2.png"
-                                                                           width=800>
-                        </li>
-                        <li>Formularul <b>Creare întrebare</b> se va completa cu informațiile necesare, întrebarea
-                            urmand sa se
-                            salveze in baza de date. La fel se procedeaza si pentru chestionare.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/admin3.png"
-                                                                           width=800>
-                        </li>
-                        <li>Formularul <b>Actualizare întrebare</b> se va completa cu <b>ID-ul</b> dorit, întrebarea
-                            urmand sa se
-                            salveze in baza de date printr-un formular ca la punctul precedent. La fel se procedeaza si
-                            pentru chestionare.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/admin4.png"
-                                                                           width=800>
-                        </li>
-                        <li>Pentru a șterge un utilizator din baza de date, se va apasă butonul corespunzător fiecărui
-                            utilizator din tabel.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/admin5.png"
-                                                                           width=800>
-                        </li>
-                    </ul>
-                </li>
-                <li id="changepass"><b>Pagina de schimbare a parolei</b></li>
-                <li style="list-style: none">
-                    <ul>
-                        <li>Pagină afișează un formular numit <b>Resetare parolă</b>, unde se vor completa corespunzător
-                            câmpurile
-                            pentru a schimbă parolă veche cu cea nouă.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/changePass.png"
-                                                                           width=800>
-                        </li>
-                        <li>Se va primi un mesaj ce confirmă această schimbare, putând reveni la profil prin acționarea
-                            butonului
-                            <b>Înapoi la profil</b>.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/passChanged.png"
-                                                                           width=800>
-                        </li>
-                    </ul>
-                </li>
             </ul>
             <section id="hardware-interface">
                 <h4>3.2 Interfața Hardware</h4>
@@ -503,10 +371,6 @@
                 <h4>3.3 Interfața Software</h4>
                 <p>
                     Cerințele minime de software includ un browser funcțional, compatibil cu HTML5 și cu JavaScript.
-                <h5>Postgres Database</h5>
-                Aceasta reprezintă baza de date în care stocăm informații despre fiecare utilizator, intrebarile,
-                chestionarele si
-                raspunsurile la acestea.
             </section>
             <section id="communication-interface">
                 <h4>3.4 Interfața de comunicare</h4>
@@ -519,10 +383,10 @@
                 <section id="management">
                     <h4>4.1 Gestionarea contului</h4>
                     <h5 id="management-1">4.1.1 Descriere și generalități</h5>
-                    Un utilizator se poate înregistra alegându-și un nume de utilizator, un email, o parola, numele si
+                    Un utilizator se poate înregistra alegându-și un nume de utilizator, un E-mail, o parola, numele si
                     prenumele.
                     Acesta se poate
-                    autentifica având nevoie doar de numele de utilizator și de parolă.
+                    autentifica având nevoie doar de E-mail și de parolă.
                     <h5 id="management-2">4.1.2 Actualizarea informațiilor</h5>
                     <ul>
                         <li>
@@ -578,21 +442,15 @@
                     această
                     oferă facilități pe care un utilizator normal nu le are. În momentul în care adminul accesează
                     panoul de control,
-                    va putea adaugă/modifică întrebări și chestionare direct de pe platforma. Totodată, acesta este
+                    va putea adaugă/modifică detalii despre anumite filme si seriale TV. Totodată, acesta este
                     capabil să șteargă
                     conturi ale utilizatorilor.
                     <h5 id="administrator-2">4.3.2 Actualizare informațiilor</h5>
                     <ul>
                         <li>
-                            În momentul în care adminul adaugă o întrebare sau un chestionar, informațiile despre
+                            În momentul în care adminul adaugă o informatie despre un film sau serial TV, detaliile
                             acestea sunt inserate
                             în baza de
-                            date.
-                        </li>
-                        <li>
-                            În momentul în care adminul modifica o întrebare sau un chestionar, informațiile despre
-                            acestea sunt
-                            actualizate în baza de
                             date.
                         </li>
                     </ul>
@@ -619,25 +477,6 @@
                         </li>
                     </ul>
                     <h5 id="logout-3">4.4.3 Condiții de funcționare</h5>
-                    <ul>
-                        <li>
-                            Utilizatorul trebuie să fie autentificat.
-                        </li>
-                    </ul>
-                </section>
-                <section id="other">
-                    <h4>4.5 Alte funcționalități</h4>
-                    <h5 id="other-1">4.6.1 Descriere și generalități</h5>
-                    In cadrul feed-ului RSS, pot fi văzute doua clasamente ce tin evidenta celor mai harnici utilizatori
-                    de pe site.
-                    <h5 id="other-2">4.5.2 Actualizarea informațiilor</h5>
-                    <ol>
-                        <li>
-                            Datele care sunt folosite in fluxul RSS sunt extrase pe baza unui camp actualizat permanent
-                            din baza de date.
-                        </li>
-                    </ol>
-                    <h5 id="other-3">4.5.3 Cerințe de funcționare</h5>
                     <ul>
                         <li>
                             Utilizatorul trebuie să fie autentificat.
