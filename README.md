@@ -42,7 +42,7 @@
                         <li><a href="#login-page">3.1.2 Pagina de autentificare </a></li>
                         <li><a href="#signup-page">3.1.3 Pagina de înregistrare </a></li>
                         <li><a href="#home-page">3.1.4 Home Page </a></li>
-                        <li><a href="#movie-page">3.1.5 Pagina cu legislația</a></li>
+                        <li><a href="#movie-page">3.1.5 Pagina cu filme sau seriale TV</a></li>
                         <li><a href="#about">3.1.6 Pagina informativa </a></li>
                         <li><a href="#help">3.1.7 Pagina de ajutor </a></li>
                         <li><a href="#admin">3.1.8 Pagina administratorului </a></li>
