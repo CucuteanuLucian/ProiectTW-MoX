@@ -7,7 +7,7 @@
 <article>
     <header>
         <h1>
-            RoT (Romanian Traffic Signs Tutor)
+            MoX (Movies and TV Shows Explorer)
         </h1>
     </header>
     <h2>Cuprins</h2>
@@ -115,42 +115,28 @@
             <ul>
                 <li property="schema:author" typeof="sa:ContributorRole">
             <span typeof="schema:Person">
-              <meta content="Adrian" property="schema:givenName">
-              <meta content="Mihai" property="schema:additionalName">
-              <meta content="Aprofirei" property="schema:familyName">
-              <span property="schema:name">Aprofirei Adrian-Mihai</span>
+              <meta content="Roberto" property="schema:givenName">
+              <meta content="Palici" property="schema:familyName">
+              <span property="schema:name">Palici Roberto</span>
             </span>
                     <ul>
                         <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
-                            <a href="mailto:aprofireiadrianmihai1@gmail.com" property="schema:email">aprofireiadrianmihai1@gmail.com</a>
+                            <a href="mailto:palici.roberto@gmail.com" property="schema:email">palici.roberto@gmail.com</a>
                         </li>
                     </ul>
                 </li>
                 <li property="schema:author" typeof="sa:ContributorRole">
             <span typeof="schema:Person">
-              <meta content="Tudor" property="schema:givenName">
-              <meta content="Ștefan" property="schema:additionalName">
-              <meta content="Păuleț" property="schema:familyName">
-              <span property="schema:name">Păuleț Tudor-Ștefan</span>
+              <meta content="Lucian" property="schema:givenName">
+              <meta content="Andrei" property="schema:additionalName">
+              <meta content="Cucuteanu" property="schema:familyName">
+              <span property="schema:name">Cucuteanu Lucian Andrei</span>
             </span>
                     <ul>
                         <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
-                            <a href="mailto:tudor.stefan.paulet@gmail.com" property="schema:email">tudor.stefan.paulet@gmail.com</a>
+                            <a href="mailto:lucian.andrei68@gmail.com" property="schema:email">lucian.andrei68@gmail.com</a>
                         </li>
                     </ul>
-                <li property="schema:author" typeof="sa:ContributorRole">
-            <span typeof="schema:Person">
-              <meta content="Călin" property="schema:givenName">
-              <meta content="Ioan" property="schema:givenName">
-              <meta content="Teodorescu" property="schema:familyName">
-              <span property="schema:name">Teodorescu Călin-Ioan</span>
-            </span>
-                    <ul>
-                        <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
-                            <a href="mailto:calin.teodorescu24@gmail.com" property="schema:email">calin.teodorescu24@gmail.com</a>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </section>
     </div>
