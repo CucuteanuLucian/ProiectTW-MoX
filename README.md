@@ -41,20 +41,11 @@
                         <li><a href="#nav-bar">3.1.1 Bara de navigație </a></li>
                         <li><a href="#login-page">3.1.2 Pagina de autentificare </a></li>
                         <li><a href="#signup-page">3.1.3 Pagina de înregistrare </a></li>
-                        <li><a href="#sendMail-page">3.1.4 Pagina de trimitere email pentru resetarea parolei</a></li>
-                        <li><a href="#resetPassword-page">3.1.5 Pagina de resetarea parolei</a></li>
-                        <li><a href="#home-page">3.1.6 Pagina de acasă </a></li>
-                        <li><a href="#learning">3.1.7 Pagina de învățare</a></li>
-                        <li><a href="#rules">3.1.8 Pagina cu legislația</a></li>
-                        <li><a href="#signs">3.1.9 Pagina cu semnele de circulație</a></li>
-                        <li><a href="#tests">3.1.10 Pagina Pagina de chestionare </a></li>
-                        <li><a href="#about">3.1.11 Pagina informativa </a></li>
-                        <li><a href="#help">3.1.12 Pagina de ajutor </a></li>
-                        <li><a href="#profile">3.1.13 Pagina de profil </a></li>
-                        <li><a href="#error400">3.1.14 Pagina 400 </a></li>
-                        <li><a href="#error404">3.1.15 Pagina 404 </a></li>
-                        <li><a href="#admin">3.1.16 Pagina administratorului </a></li>
-                        <li><a href="#changepass">3.1.17 Pagina de schimbare a parolei </a></li>
+                        <li><a href="#home-page">3.1.4 Home Page </a></li>
+                        <li><a href="#movie-page">3.1.5 Pagina cu legislația</a></li>
+                        <li><a href="#about">3.1.6 Pagina informativa </a></li>
+                        <li><a href="#help">3.1.7 Pagina de ajutor </a></li>
+                        <li><a href="#admin">3.1.8 Pagina administratorului </a></li>
                     </ul>
                 </li>
                 <li><a href="#hardware-interface">3.2 Interfața Hardware </a></li>
@@ -90,13 +81,6 @@
                         <li><a href="#logout-1">4.4.1 Descriere și generalități</a></li>
                         <li><a href="#logout-2">4.4.2 Actualizarea informațiilor</a></li>
                         <li><a href="#logout-3">4.4.3 Condiții de funcționare</a></li>
-                    </ul>
-                </li>
-                <li><a href="#other">4.5 Alte funcționalități </a>
-                    <ul>
-                        <li><a href="#other-1">4.5.1 Descriere și generalități</a></li>
-                        <li><a href="#other-2">4.5.2 Actualizarea informațiilor</a></li>
-                        <li><a href="#other-3">4.5.3 Condiții de funcționare</a></li>
                     </ul>
                 </li>
             </ul>
@@ -305,7 +289,7 @@
                     <ul>
                         <li>Pagina oferă funcționalitatea de înregistrare a utilizatorilor, pentru a putea beneficia de
                             toate
-                            funcționalitățile RoT.
+                            funcționalitățile MoX.
                         </li>
                         <li>Pentru a se înregistra, utilizatorul trebuie să completeze câmpurile <b>Email</b>,
                             <b>Nume</b>,
@@ -331,7 +315,7 @@
                         </li>
                     </ul>
                 </li>
-                <li id="rules"><b>Movie Page</b></li>
+                <li id="movie-page"><b>Movie Page</b></li>
                 <li style="list-style: none">
                     <ul>
                         <li>Pagina conține detalii ample legate de anumite filme sau seriale TV cautate de utilizatori.</li>
@@ -342,7 +326,7 @@
                 <li id="about"><b>Pagina informativa</b></li>
                 <li style="list-style: none">
                     <ul>
-                        <li>Pagina are rolul de a introduce site-ul RoT pe scurt, prin menționarea unor mici detalii:
+                        <li>Pagina are rolul de a introduce site-ul MoX pe scurt, prin menționarea unor mici detalii:
                             tehnologii
                             utilizate, numele autorilor, scopul aplicației și bibliografia.
                         </li>
