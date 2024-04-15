@@ -145,15 +145,13 @@
         <section id="introduction-purpose">
             <h4>1.1 Scop</h4>
             <p>
-                RoT (Romanian Traffic Signs Tutor) este o aplicație web dezvoltată de studenții menționați în secțiunea
+                MoX (Movies and TV Shows Explorer) este o aplicație web dezvoltată de studenții menționați în secțiunea
                 de Autori de la Facultatea de
                 Informatică a Universității Alexandru Ioan Cuza.
                 Scopul acestui document este acela de a prezenta o descriere detaliată a funcționalităților, precum și
-                de
-                specifica cerințele aplicației web. Această aplicație
-                va oferi utilizatorilor posibilitatea învățării legislației și a semnelor rutiere din România. Pe lângă
-                acestea, utilizatorului îi sunt
-                disponibile semnele rutiere din 5 alte țări: Anglia, Franța, Italia, Turcia și Islanda.
+                de a
+                specifica cerințele aplicației web. Această aplicație va oferi utilizatorilor posibilitatea de a vedea librăria de filme și seriale TV disponibile pe site-urile de streaming Netflix și Disney+.
+                De asemenea, utilizatorilor le sunt oferite detalii despre aceste filme sau seriale TV.
             </p>
         </section>
         <section id="conventions">
@@ -174,10 +172,10 @@
         <section id="audience">
             <h4>1.3 Publicul țintă</h4>
             <p>
-                Acest document este destinat profesorilor, studenților sau dezvoltatorilor, însă orice utilizator,
+                Acest document este destinat tuturor utilizatorilor,
                 indiferent
                 de cunoștințele lor tehnologice,
-                poate consulta secțiunile de <b>Interfeța utilizatorului</b> și <b>Caracteristici ale sistemului</b>
+                poate consulta secțiunile de <b>Home Page</b> și <b>Start Page</b>
                 pentru a
                 obține o mai bună înțelegere a ceea ce oferă aplicația.
             </p>
@@ -185,23 +183,17 @@
         <section id="product-scope">
             <h4>1.4 Scopul Produsului</h4>
             <p>
-                Scopul aplicației este acela de a oferi utilizatorilor un soft educațional ce propune un mod de învățare
-                a
-                legislației și semnelor rutiere din România. Utilizatorii pot citi codul rutier, dar și întrebări
-                similare
-                celor din chestionarele auto, ce conț în explicații pentru fiecare varianta de răspuns. Totodată,
-                utilizatorii
-                pot rezolva și chestionare predefinite, conținând 26 de întrebări, în vederea pregătirii componenței
-                teoretice
-                a examenului pentru obținerea permisului de conducere. De asemenea, utilizatorii își pot crea un cont
+                Scopul aplicației este acela de a pune la dispozitia utilizatorilor diferite informatii despre filmele si serialele TV care apartin platformelor Netflix si Disney+.
+                Utilizatorii pot accesa diferite filme sau seriale TV, unde pot afla informatii precum: numarul de episoade, durata unui episod, perioada de difuzare, rating, trailer, poster,
+                actorii participanti si recomandari. De asemenea, utilizatorii își pot crea un cont
                 pentru a
-                beneficia de restul funcționalităților RoT.
+                beneficia de restul funcționalităților MoX.
             </p>
         </section>
         <section id="references">
             <h4>1.5 Bibliografie</h4>
             <ul>
-                <li>Buraga Sabin-Corneliu, Site-ul Tehnologii Web, FII UAIC</li>
+                <li>Daniel Isepciuc, Site-ul Tehnologii Web, FII UAIC</li>
                 <li>H Rick. IEEE-Template - GitHub</li>
             </ul>
         </section>
@@ -210,33 +202,24 @@
         <h3>2. Descriere Generală</h3>
         <section id="product-perspective">
             <h4>2.1 Perspectiva produsului</h4>
-            <p>RoT (Romanian Traffic Signs Tutor) este o aplicație dezvoltată în cadrul cursului de Tehnologii Web,
+            <p>MoX (Movies and TV Shows Explorer) este o aplicație dezvoltată în cadrul cursului de Tehnologii Web,
                 menită să
-                ofere un mod de învățare a legislației rutiere, a semnelor de circulație din România, dar și din alte
-                țări.
+                ofere un mod de a vizualiza libraria de seriale TV si filme puse la dispozitie de site-urile de streaming Netflix si Disney+.
         </section>
         <section id="product-functions">
             <h4>2.2 Funcționalitățile produsului</h4>
             Fiecare utilizator va avea acces la urmatoarele funcționălități:
             <ul>
-                <li>să se înregistreze pe site.</li>
-                <li>să se autentifice pe site.</li>
-                <li>să își reseteze parola in cazul in care a uitat-o.</li>
-                <li>să consulte pagină "Acasă" și noutățile disponibile</li>
-                <li>să acceseze pagina "Legislație" pentru a accesa codul rutier, "Despre", "Ajutor"</li>
-                <li>să acceseze pagina "Semne de circulație" pentru a vizualiza semne rutiere atât din România, cât și
-                    din alte țări
-                </li>
+                <li>să acceseze pagina "Start Page" pentru a se inregistra</li>
+                <li>să acceseze pagina "LogIn Page" pentru a se autentifica</li>
+                <li>să consulte pagină "Home Page" și noutățile disponibile</li>
+                <li>să acceseze pagina "Home Page" pentru a vizualiza liste organizate dupa categorii de filme si seriale TV.</li>
                 <li>să acceseze pagina "Despre" pentru a accesa scurtă descriere a paginii web</li>
                 <li>să acceseze pagina "Ajutor" pentru a beneficia de sfaturi în vederea utilizării aplicației</li>
-                <li>dacă este <b>autentificat</b>, să acceseze pagină "Învață" și să rezolve întrebări</li>
-                <li>dacă este <b>autentificat</b>, să acceseze pagină "Chestionare" și să rezolve teste predefinite</li>
-                <li>dacă este <b>autentificat</b>, să își acceseze profilul și sa verifice statisticile personale</li>
+                <li>dacă este <b>autentificat</b>, să acceseze pagină "Home Page" și să vizualizeze listele precizate anterior</li>
+                <li>dacă este <b>autentificat</b>, să acceseze pagină "Movie Page" și să vizualizeze informatii detaliate despre un anumit film sau serial TV</li>
                 <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate șterge utilizatori din baza de date</li>
-                <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate adăuga întrebări noi</li>
-                <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate modifica întrebări deja existente</li>
-                <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate adăuga chestionare noi</li>
-                <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate modifica chestionare deja existente</li>
+                <li>dacă utilizatorul are rol de <b>admin</b>, acesta poate adăuga filme sau seriale TV noi</li>
             </ul>
         </section>
         <section id="users">
@@ -246,37 +229,25 @@
                 <li>utilizatorii autentificați pot fi:</li>
                 <li style="list-style: none">
                     <ul>
-                        <li>orice categorie de oameni care doresc să învețe legislația rutieră și semne de circulație
-                            din România și nu numai.
+                        <li>orice categorie de oameni care doresc să afle informatii in legatura cu anumite filme sau seriale TV.
                         </li>
                     </ul>
                 </li>
                 <li>
                     utilizatorii neautentificați pot fi:
                     <ul>
-                        <li>cursanți al școlilor de șoferi ce se pregătesc pentru susținerea probei teoretice a
-                            examenului de obținere a permisului de conducere.
+                        <li>orice persoana indiferent de categoria de varsta.
                         </li>
                     </ul>
                 </li>
             </ul>
             <h5>2.3.2 Caracteristici</h5>
             <ul>
-                <li>Utilizatorii care sunt <b> autentificați </b> pot accesa pagină de "Legislație", de "Semne de
-                    circulație",
+                <li>Utilizatorii care sunt <b> autentificați </b> pot accesa pagină de "Home Page", de "Movie Page",
                     dar și cele două pagini ce oferă detalii și sfaturi cu privire la aplicație, "Despre" și "Ajutor".
-                    Mai mult, aceștia pot rezolva întrebări (explicate) și teste predefinite. De asemenea, aceștia pot
-                    să își
-                    monitorizeze progresul prin cunoașterea numărului de întrebări/chestionare rezolvate, dar și din
-                    informații
-                    referitoare la procentajul de reușită sau media de timp; toate acestea fiind salvate la profilul
-                    fiecărui utilizator.
+                    Mai mult, aceștia pot accesa anumite filme sau seriale TV, pot lasa recenzii si note.
                 </li>
-                <li>Utilizatorii care nu sunt autentificați pot să vizualizeze și ei codul rutier (pagina de
-                    "Legislație") și
-                    "Semne de circulație", dar în schimb nu pot accesa modul de "Invață" și nici cel de "Chestionare".
-                    Așadar, aceștia pot să se înregistreze ca și utilizator și să beneficieze de toate
-                    funcționalitățile.
+                <li>Utilizatorii care nu sunt autentificați pot să vizualizeze doar paginile de "Start Page" si "Movie Page", in care pot cauta detalii despre filme si seriale TV.
                 </li>
             </ul>
         </section>
