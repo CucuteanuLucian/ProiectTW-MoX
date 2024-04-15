@@ -279,27 +279,24 @@
                         <li>Aceasta reprezintă meniul de navigare către fiecare pagina a aplicației, prezent pe fiecare
                             pagină totodată.
                         </li>
-                        <li class="pictures" style="list-style: none"><img alt="login" src="images/navBar.png" width=800
+                        <li class="pictures" style="list-style: none"><img alt="login" src="materials/navbar.png" width=800
                         ></li>
                     </ul>
                 </li>
                 <li id="login-page"><b>Pagina de autentificare</b></li>
                 <li style="list-style: none">
                     <ul>
-                        <li>Pagina are rolul de a realiza autentificarea utilizatorilor la RoT.</li>
-                        <li>Pentru a se autentifica, utilizatorul trebuie să completeze câmpurile de "username" și
-                            "parolă" cu
-                            credențiale <b>valide</b>, urmând să acționeze butonul <b>Autentificare</b>.
+                        <li>Pagina are rolul de a realiza autentificarea utilizatorilor la MoX.</li>
+                        <li>Pentru a se autentifica, utilizatorul trebuie să completeze câmpurile de "E-mail" și
+                            "Password" cu
+                            credențiale <b>valide</b>, urmând să acționeze butonul <b>Log In</b>.
                         </li>
                         <li> În cazul în care utilizatorul nu are cont pe site, acesta își poate crea unul prin
                             accesarea pagini de
-                            înregistrare, ce se face prin apăsarea butonului <b>Creează un cont nou</b>.
+                            înregistrare, ce se face prin apăsarea butonului <b>Register</b>.
                         </li>
-                        <li> În cazul în care utilizatorul și-a uitat parola, acesta poate să o reseteze selectând
-                            opțiunea de
-                            <b> Ai uitat parola? </b></li>
                         <li class="pictures" style="list-style: none"><img alt="login" height="400"
-                                                                           src="images/loginPage.png" width=800>
+                                                                           src="materials/loginPage.png" width=800>
                         </li>
                     </ul>
                 </li>
@@ -322,88 +319,26 @@
                             coltul din dreapta-sus
                             al paginii, pentru a reveni la meniul de autentificare.
                         </li>
-                        <li class="pictures" style="list-style: none"><img alt="signup" height="400"
-                                                                           src="images/signupPage.png" width=800>
+                        <li class="pictures" style="list-style: none">
                     </ul>
                 </li>
-                <li id="sendMail-page"><b>Pagina de de resetare a parolei prin mail</b></li>
+                <li id="home-page"><b> Home Page</b></li>
                 <li style="list-style: none">
                     <ul>
-                        <li> Pagina are rolul de a trimite un email către utilizator, care îl va redirecționa spre o
-                            pagină nouă, unde care
-                            își va introduce nouă parolă. La apăsarea butonului de <b> Trimite mail </b>, utilizatorul
-                            va fi redirecționat
-                            către pagină de autentificare.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="login" height="400"
-                                                                           src="images/sendMail.png" width=800></li>
-                    </ul>
-                </li>
-                <li id="home-page"><b> Pagina de acasă</b></li>
-                <li style="list-style: none">
-                    <ul>
-                        <li>Pagina are rolul de prezența ultimele noutăți, sfaturi și clasementele actualizate.</li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/homePage.png"
+                        <li>Pagina are rolul de prezența liste de filme si seriale TV in functie de diferite categorii.</li>
+                        <li class="pictures" style="list-style: none"><img alt="overview" src="materials/homePage1.png"
                                                                            width=800>
                         </li>
                     </ul>
                 </li>
-                <li id="learning"><b>Pagina de învățare</b></li>
+                <li id="rules"><b>Movie Page</b></li>
                 <li style="list-style: none">
                     <ul>
-                        <li>Pagina oferă o întrebare dată spre rezolvare, la care se va oferi o explicație indiferent de
-                            corectitudinea
-                            răspunsului dat de utilizator. Butonul <b>Trimite răspunsul</b> va valida întrebarea, iar
-                            <b>Următoarea întrebare</b>
-                            o va sări pe cea curentă, dar se va reveni mai târziu la ea.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/learn1.png"
-                                                                           width=800>
-                        </li>
-                        <li>După ce răspunsul a fost trimis, utilizatorul va vedea corectitudinea fiecărui răspuns,
-                            însoțite de o
-                            explicație corespunzătoare.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="images/learn2.png"
-                                                                           width=800>
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="editprofile"
-                                                                           src="images/learningPage.png" width=800>
-                        </li>
-                    </ul>
-                </li>
-                <li id="rules"><b>Pagina cu legislația</b></li>
-                <li style="list-style: none">
-                    <ul>
-                        <li>Pagina conține codul rutier actualizat la zi.</li>
-                        <li class="pictures" style="list-style: none"><img alt="overview" src="i mages/rulesPage.png"
+                        <li>Pagina conține detalii ample legate de anumite filme sau seriale TV cautate de utilizatori.</li>
+                        <li class="pictures" style="list-style: none"><img alt="overview" src="materials/moviePage.png"
                                                                            width=800>
                         </li>
                     </ul>
-                <li id="signs"><b>Pagina cu semnele de circulație</b></li>
-                <li style="list-style: none">
-                    <ul>
-                        <li>Pagina conține semne rutiere atât din țară noastră, cât și din alte cinci țări.</li>
-                        <li> Pentru a accesa semnele din România, se va face click pe steag, urmând să se selecteze în
-                            mod specific
-                            categoria de semne dorită spre a fi văzută. Apăsând pe oricare dintre cele 5 steaguri
-                            străine, se va deschide
-                            o listă cu semnele de circulație corespunzătoare.
-                        </li>
-                        <li class="pictures" style="list-style: none"><img alt="streetSigns"
-                                                                           src="images/streetSigns.png" width=800
-                        ></li>
-                        <li class="pictures" style="list-style: none"><img alt="streetSignsRomania"
-                                                                           src="images/streetSignsRomania.png" width=800
-                        ></li>
-                        <li class="pictures" style="list-style: none"><img alt="streetSignsRomaniaExamples"
-                                                                           src="images/streetSignsRomaniaExample.png" width=800
-                        ></li>
-                        <li class="pictures" style="list-style: none"><img alt="streetSignsItaly"
-                                                                           src="images/streetSignsItaly.png" width=800
-                        ></li>
-                    </ul>
-                </li>
                 <li id="tests"><b>Pagina de chestionare</b></li>
                 <li style="list-style: none">
                     <ul>
