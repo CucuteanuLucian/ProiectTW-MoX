@@ -165,6 +165,34 @@ body {
     margin-right: 1rem;
     border: 2px solid rgba(216, 30, 91, 1);
   }
+  .footer{
+    padding: 5rem;
+    display: flex;
+    justify-content: space-around;
+    border-top: 0.5rem solid rgba(216, 30, 91, 1);
+    
+
+}
+
+.footer h3{
+    font-size: 15px;
+    font-weight: 300;
+    padding-top: 5px;
+}
+.footer ul{
+    font-size: small;
+    padding: 10px;
+    list-style-type:disc
+}
+.links{
+    text-decoration: none;
+
+}
+.footer h2{
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
 }
 
 @media (max-width: 1200px) and (min-width: 776px) {
@@ -316,6 +344,34 @@ body {
   .recommendations h2 {
     font-size: 2.5rem;
   }
+  .footer{
+    padding: 5rem;
+    display: flex;
+    justify-content: space-around;
+    border-top: 0.5rem solid rgba(216, 30, 91, 1);
+    
+
+}
+
+.footer h3{
+    font-size: 15px;
+    font-weight: 300;
+    padding-top: 5px;
+}
+.footer ul{
+    font-size: small;
+    padding: 10px;
+    list-style-type:disc
+}
+.links{
+    text-decoration: none;
+
+}
+.footer h2{
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
 }
 
 @media (max-width: 1200px) and (min-width: 777px) {
@@ -622,5 +678,33 @@ body {
   .recommendations h2 {
     font-size: 1.5rem;
   }
+  .footer{
+    padding: 5rem;
+    display: flex;
+    justify-content: space-around;
+    border-top: 0.5rem solid rgba(216, 30, 91, 1);
+    
+
+}
+
+.footer h3{
+    font-size: 15px;
+    font-weight: 300;
+    padding-top: 5px;
+}
+.footer ul{
+    font-size: small;
+    padding: 10px;
+    list-style-type:disc
+}
+.links{
+    text-decoration: none;
+
+}
+.footer h2{
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
 }
 
