@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <head>
     <title>MoX</title>
-    <link rel="stylesheet" href="HomePage_Styles.css">
+    <link rel="stylesheet" href="HomePage.css">
 </head>
 <body>
     <?=date('h:i:s A');
     ?>
+    <b?php
+    $api_key = '8ca6c40d2f4e3a85543f56e8c7b0fc2f';
+    $servername = "localhost";
+    $username = "luci";
+    $password = "luci";
+    $database = "mox";
+?>
     <div class="top">
         <div class="btn-container">
             <button class="btn"><img src="../materials/HomePage/logo2.png" alt="no image found"></button>
@@ -37,6 +44,8 @@
             <img src="../materials/HomePage/BCS.jpg" alt="no image found">
             <img src="../materials/HomePage/GOT.jpg" alt="no image found">
         </div>
+        <button class="prev" onclick="moveSlider1(-1)"><b>&#10094;</b></button>
+        <button class="next" onclick="moveSlider1(1)"><b>&#10095;</b></button>
     </div>
     <div class="TVShows">
         <h2 class="CategoryTitle">TV Shows:</h2>
@@ -56,6 +65,8 @@
             <img src="../materials/HomePage/BCS.jpg" alt="no image found">
             <img src="../materials/HomePage/GOT.jpg" alt="no image found">
         </div>
+        <button class="prev" onclick="moveSlider2(-1)"><b>&#10094;</b></button>
+        <button class="next" onclick="moveSlider2(1)"><b>&#10095;</b></button>
     </div>
     <div class="Movies">
         <h2 class="CategoryTitle">Movies:</h2>
@@ -75,6 +86,8 @@
             <img src="../materials/HomePage/BCS.jpg" alt="no image found">
             <img src="../materials/HomePage/GOT.jpg" alt="no image found">
         </div>
+        <button class="prev" onclick="moveSlider3(-1)"><b>&#10094;</b></button>
+        <button class="next" onclick="moveSlider3(1)"><b>&#10095;</b></button>
     </div>
     <div class="footer">
         <div class="contacts">
@@ -100,4 +113,5 @@
           </ul>
         </div>
         </div>
+        <script src="HomePageScript.js"></script>
 </body>

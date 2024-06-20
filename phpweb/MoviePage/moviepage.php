@@ -1,19 +1,20 @@
 <?php
 $api_key = '8ca6c40d2f4e3a85543f56e8c7b0fc2f';
 $servername = "localhost";
-$username = "robi";
-$password = "robi";
+$username = "luci";
+$password = "luci";
 $database = "mox";
 
 $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
-$sql = "SELECT * FROM netflix_shows where title LIKE 'Dick Johnson is dead'";
+$name = "Better call saul";
+$sql = "SELECT * FROM netflix_shows where title LIKE '$name' UNION SELECT * FROM disneyplus_shows where title LIKE '$name'";
 $result = $conn->query($sql);
 if ($result) {
   $row = $result->fetch_assoc();
+  $s_id = $row["show_id"];
   $description = $row['description'];
   $show_title = $row["title"];
   $type = $row["type"];
@@ -25,10 +26,32 @@ if ($result) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$conn->close();
-
 $genres = explode(",", $listed_in);
 $actors = explode(",", $cast);
+
+function get_recommendation($genre, $id, $conn, $api_key)
+{
+  $genre = $genre . '%';
+  $sql = "SELECt * from 
+  ((SELECT * FROM netflix_shows where listed_in LIKE '$genre' and show_id not like '$id') 
+  union 
+  (SELECT * FROM disneyplus_shows where listed_in LIKE '$genre' and show_id not like '$id')) 
+  as combined_tables order by rand() Limit 3;";
+  $result = $conn->query($sql);
+  if ($result) {
+    while ($row = $result->fetch_assoc()) {
+      $recommendedTitle = $row["title"];
+      $recommendedTitleType = $row["type"];
+      if ($recommendedTitleType == 'TV Show') {
+        $recommendedLinkType = 'tv';
+      } else {
+        $recommendedLinkType = 'movie';
+      }
+      $recommendedTitleId = get_show_id($api_key, $recommendedTitle, $recommendedLinkType);
+      get_poster($api_key, $recommendedTitleId, $recommendedLinkType);
+    }
+  }
+}
 
 function eliminate_space($array)
 {
@@ -67,7 +90,12 @@ function get_character_name($api_key, $show_id, $actor_name, $linktype)
   }
 }
 
-function get_actor_photo($api_key, $show_id, $actor_name, $linktype){
+function get_actor_photo($api_key, $show_id, $actor_name, $linktype)
+{
+  if($show_id == null)
+  {
+    return 0;
+  }
   $url = "https://api.themoviedb.org/3/$linktype/$show_id/credits?api_key=$api_key";
   $response = file_get_contents($url);
   $data = json_decode($response, true);
@@ -79,56 +107,69 @@ function get_actor_photo($api_key, $show_id, $actor_name, $linktype){
   echo "<img src='https://image.tmdb.org/t/p/w500$profile_photo' alt='no image found'>";
 }
 
-function get_poster($api_key, $show_id, $linktype){
+function get_poster($api_key, $show_id, $linktype)
+{
+  if($show_id==null)
+  {
+    echo "<img src='../materials/npf.png' alt='Movie Poster'>";
+  }
   $url = "https://api.themoviedb.org/3/$linktype/$show_id/images?api_key=$api_key";
   $response = file_get_contents($url);
-  if($response !==false){
+  if ($response !== false) {
     $data = json_decode($response, true);
-    if(isset($data["posters"][0]["file_path"])){
+    if (isset($data["posters"][0]["file_path"])) {
       $poster_path = $data["posters"][0]["file_path"];
       $poster_url = "https://image.tmdb.org/t/p/w500$poster_path";
       echo "<img src='$poster_url' alt='Movie Poster'>";
-  }else{
-    echo "Poster not found for this movie.";
+    } else {
+      echo "<img src='../materials/npf.png' alt='Movie Poster'>";
+      //echo "Poster not found for this movie.";
+    }
+  } else {
+    echo "Failed to fetch data";
   }
-}else{
-  echo "Failed to fetch data";
-}
 }
 
-function get_rating($api_key, $show_id, $linktype) {
+function get_rating($api_key, $show_id, $linktype)
+{
+  if($show_id == null) {
+    echo "Rating Not Found";
+  }
   $url = "https://api.themoviedb.org/3/$linktype/$show_id?api_key=$api_key";
   $response = file_get_contents($url);
-  if($response !==false){
+  if ($response !== false) {
     $data = json_decode($response, true);
-    if(isset($data["vote_average"])){
-      $rating = substr($data["vote_average"], 0 ,3);
-      echo "$rating";
-  }else{
-    echo "Rating not found for this movie.";
+    if (isset($data["vote_average"])) {
+      $rating = substr($data["vote_average"], 0, 3);
+      echo "Rating: "."$rating" . "/10";
+    } else {
+      echo "Rating not found for this movie.";
+    }
+  } else {
+    echo "Failed to fetch rating data.";
   }
-}else{
-  echo "Failed to fetch rating data.";
-}
 }
 
 
 
-function get_trailer($api_key, $show_id, $linktype){
+function get_trailer($api_key, $show_id, $linktype)
+{
   $url = "https://api.themoviedb.org/3/$linktype/$show_id/videos?api_key=$api_key";
   $response = file_get_contents($url);
-  if($response !==false){
+  if ($response !== false) {
     $data = json_decode($response, true);
-    if(isset($data["results"][0]["key"])){
+    if (isset($data["results"][0]["key"])) {
       $video_key = $data["results"][0]["key"];
       $video_url = "<iframe width='855' height='704' src='https://www.youtube.com/embed/$video_key' title='Trailer' frameborder='0' allow='accelerometer; clipboard-write; encrypted-media; gyroscope; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>";
       echo $video_url;
-  }else{
-    echo "Poster not found for this movie.";
+    } else {
+      echo "Poster not found for this movie.";
+    }
+  } else {
+    echo "Failed to fetch data";
   }
-}else{
-  echo "Failed to fetch data";
-}
+
+
 
 }
 $show_id = get_show_id($api_key, $show_title, $linktype);
@@ -146,11 +187,12 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
 </head>
 
 <body>
-  <?php echo $show_id; ?>
+  <?php echo $show_id;
+  ?>
   <div class="top">
     <div class="btn-container">
       <button class="btn">
-      <a href="../HomePage/HomePage.php"><img src="../materials/HomePage/logo2.png" alt="no image found"></a>
+        <a href="../HomePage/HomePage.php"><img src="../materials/HomePage/logo2.png" alt="no image found"></a>
       </button>
       <button class="btn"><a href="../HomePage/HomePage.php">Home</a></button>
       <button class="btn">TV Shows</button>
@@ -193,7 +235,7 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
             echo "<button>" . $genre . "</button>";
           } ?>
         </div>
-        <h1>Rating: <?php get_rating($api_key, $show_id, $linktype); ?>/10</h1>
+        <h1><?php get_rating($api_key, $show_id, $linktype); ?></h1>
       </div>
     </div>
   </div>
@@ -258,9 +300,8 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
     </div>
     <div class="recommendations">
       <h2>You might also like...</h2>
-      <div class="poster"><img src="../materials/peaky.jpg" alt="no image found">
-        <img src="../materials/HomePage/BCS.jpg" alt="no image found">
-        <img src="../materials/HomePage/GOT.jpg" alt="no image found">
+      <div class="poster">
+        <?php get_recommendation($genres[0], $s_id, $conn, $api_key); ?>
       </div>
     </div>
   </div>
@@ -288,6 +329,9 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
       </ul>
     </div>
   </div>
+  <?php
+  $conn->close();
+  ?>
 </body>
 
 </html>
