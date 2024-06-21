@@ -73,6 +73,12 @@ body{
 }
 .email{
     margin: 1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email input{
+    margin-bottom:1rem;
 }
 .register-button{
 

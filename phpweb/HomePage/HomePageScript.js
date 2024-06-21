@@ -126,4 +126,26 @@ function moveSlider3(direction) {
 }
 
 
-window.addEventListener('resize', handleResize);
+//window.addEventListener('resize', handleResize);
+
+
+var button = document.getElementById("dropdownButton");
+var dropdown = document.getElementById("dropdownMenu");
+
+// Toggle the dropdown menu when the button is clicked
+button.onclick = function() {
+    if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    } else {
+        dropdown.style.display = "block";
+    }
+};
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('#dropdownButton')) {
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+        }
+    }
+};
