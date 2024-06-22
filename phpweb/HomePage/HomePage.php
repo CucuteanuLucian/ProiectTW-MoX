@@ -10,6 +10,12 @@ $user_data = check_login($conn);
 <head>
     <title>MoX</title>
     <link rel="stylesheet" href="../HomePage/HomePage.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        console.log("jQuery is loaded and ready.");
+    });
+</script>
 </head>
 
 <body>
@@ -24,10 +30,16 @@ $user_data = check_login($conn);
                 <button class="btn">New & Popular</button>
             </div>
             <div class="search-container">
-                <form method="POST">
-                <input name="show_name"class="search-bar" type="text" placeholder="What are you watching today?">
-                <button class="search-btn" type="submit"><img src="../materials/HomePage/lupa2.png"></button>
+                <form method="POST" class ="search">
+                <div class="searchanddrop">
+                <input id="show_name" name="show_name"class="search-bar" type="text" placeholder="What are you watching today?" autocomplete="off">
+                <div id="suggestions" class="suggestions" style="display: none;"></div>
+                </div>
+                <button class="search-btn" type="submit">
+                <img src="../materials/HomePage/lupa2.png">
+                 </button>
                 </form>
+                
                 <div>
                     <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
                     <div id="dropdownMenu" class="dropdownContent">

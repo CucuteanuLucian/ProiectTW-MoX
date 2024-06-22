@@ -13,7 +13,7 @@ function check_login($conn){
         }
     }
     //redirect login
-    header("Location: login.php");
+    header("Location: ../LogInPage/login.php");
     die;
 }
 

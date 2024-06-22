@@ -149,3 +149,25 @@ window.onclick = function(event) {
         }
     }
 };
+
+$(document).ready(function(){
+    $('#show_name').on('input', function(){
+        var query = $(this).val();
+        if(query.length > 2){
+            $.ajax({
+                url: '../HomePage/search.php',
+                method: 'POST',
+                data: {query: query},
+                success: function(data){
+                    $('#suggestions').html(data).show();
+                }
+            });
+        } else {
+            $('#suggestions').hide();
+        }
+    });
+    $(document).on('click', '.suggestion-item', function(){
+        $('#show_name').val($(this).text());
+        $('#suggestions').hide();
+    });
+});

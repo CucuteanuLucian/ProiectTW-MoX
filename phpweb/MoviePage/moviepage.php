@@ -52,6 +52,7 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MoX</title>
   <link rel="stylesheet" href="../MoviePage/moviepage_styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -65,19 +66,25 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
       <button class="btn">Movies</button>
       <button class="btn">New & Popular</button>
     </div>
-    <div class="search-container"><form method = "post">
-      <input name="show_name" class="search-bar" type="text" placeholder="What are you watching today?" />
-      <button class="search-btn" type="submit">
-        <img src="../materials/HomePage/lupa2.png">
-      </button></form>
-      <div>
-        <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
-          <div id="dropdownMenu" class="dropdownContent">
-              <a href="">Acount Details</a>
-              <a href="../LogInPage/logout.php">Log Out</a>
-          </div>
-        </div>
-    </div>
+    <div class="search-container">
+                <form method="POST" class ="search">
+                <div class="searchanddrop">
+                <input id="show_name" name="show_name"class="search-bar" type="text" placeholder="What are you watching today?" autocomplete="off">
+                <div id="suggestions" class="suggestions" style="display: none;"></div>
+                </div>
+                <button class="search-btn" type="submit">
+                <img src="../materials/HomePage/lupa2.png">
+                 </button>
+                </form>
+                
+                <div>
+                    <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
+                    <div id="dropdownMenu" class="dropdownContent">
+                        <a href="">Acount Details</a>
+                        <a href="../LogInPage/logout.php">Log Out</a>
+                    </div>
+                </div>
+            </div>
   </div>
   <div class="movie">
     <h1><?php echo $show_title; ?></h1>
