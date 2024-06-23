@@ -170,7 +170,7 @@
     .Dcontainer {
         display: grid;
         grid-template-columns: repeat(6, 1fr); 
-        padding-left: 1.2vw;
+        padding-left: 0.3vw;
     }
 
     .Dcontainer img {
@@ -180,14 +180,17 @@
         border: 2px solid #D81E5B;
     }
 
+    .Dcontainer form {
+      text-align: center;
+    }
+
     .HPbutton {
       background: none;
       border: none;
-      padding: 0;
       cursor: pointer;
       outline: none;
-      margin-top: 1.2vw;
-      text-align: left;
+      text-align: center;
+      padding-top: 0.8vw;
     }
   
     .poster {
@@ -203,11 +206,18 @@
     .gridElement p {
         text-align: center;
         font-size: 1vw;
+        padding: 0 0.3vw 0 0.3vw;
+    }
+
+    .gridElement {
+        display: grid;
+        justify-content: center;
+        align-items: center;   
     }
     
     h1 {
-        margin-left: 1vw;
-        margin-top: 1vw;
+        margin-left: 0.8vw;
+        margin-top: 0.8vw;
         font-size: 2vw;
     }
   
