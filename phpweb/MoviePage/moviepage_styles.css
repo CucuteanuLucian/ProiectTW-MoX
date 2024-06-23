@@ -23,6 +23,17 @@ a {
 
 
 @media (min-width: 1201px) {
+
+  .notitle{
+    height:100vh;
+  }
+  .notitle h1{
+     margin: 100px 0 0 100px;
+   }
+   .notitle p{
+    margin-left:100px;
+    font-size: 20px;
+  }
   .top {
     justify-content: space-between;
     background-color: #d81e5b;
@@ -277,7 +288,6 @@ a {
   .poster {
     display: flex;
     margin-top: 2rem;
-    margin-right: 7rem;
   }
 
   .poster img {
@@ -546,8 +556,6 @@ a {
     display: flex;
     justify-content: space-around;
     border-top: 0.5rem solid rgba(216, 30, 91, 1);
-
-
   }
 
   .footer h3 {

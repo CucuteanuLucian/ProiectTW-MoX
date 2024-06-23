@@ -14,7 +14,35 @@ body {
     color: white;
 }
 
+
+
+
 @media (min-width: 1201px) {
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #D81E5B;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+
     .top {
         justify-content: space-between;
         background-color: #D81E5B;
@@ -45,19 +73,49 @@ body {
         cursor: pointer;
     }
 
+    .search {
+        display: flex;
+    }
+
+    .searchanddrop {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 315px;
+    }
+
+    .suggestions {
+        margin-top: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        top: 100%;
+        left: 0;
+        max-width: 100%;
+        z-index: 1;
+    }
+
+    .suggestion-item {
+        padding: 10px;
+        cursor: pointer;
+        max-width: 100%;
+    }
+
+    .suggestion-item:hover {
+        background-color: #D81E5B;
+    }
+
     .search-container {
         padding-top: 10px;
-        padding-bottom: 10px;
         display: flex;
         align-content: center;
-        padding-right: 25px;
+        margin-right: 30px;
     }
 
     .search-bar {
         width: 300px;
         padding: 5px;
         border: none;
-        border-radius: 4px 0 0 4px;
+        border-radius: 4px;
     }
 
     .search-btn img {
@@ -71,50 +129,97 @@ body {
         background-color: white;
         border: none;
         border-radius: 0 4px 4px 0;
+        height: 100%;
     }
 
-    .ForYou,
-    .TVShows,
-    .Movies {
-        padding: 30px 25px 0 25px;
-        font-weight: 600;
+    #dropdownButton {
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-left: 10px;
+        padding: 5px;
+        font-weight: 550;
+        font-size: 15px;
     }
+
+    #dropdownButton:hover {
+        background-color: white;
+        color: #D81E5B;
+        border: 2px solid #D81E5B;
+        cursor: pointer;
+    }
+
+    .dropdownContent {
+        display: none;
+        /* Hidden by default */
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        right: 0;
+        margin-top: 9px;
+    }
+
+    .dropdownContent a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdownContent a:hover {
+        background-color: #D81E5B;
+        color: white;
+
+    }
+
 
     .CategoryTitle {
         font-family: Montserrat;
         padding-bottom: 15px;
     }
 
+    .ForYou,
+    .TVShows,
+    .Movies {
+        position: relative;
+        overflow: hidden;
+        padding: 30px 25px 0 25px;
+        font-weight: 600;
+    }
+
     .ForYouBar,
     .TVShowsBar,
     .MoviesBar {
         display: flex;
-        justify-content: space-between;
+        transition: transform 0.5s ease;
         align-items: center;
-        overflow-x: auto;
-    }
-
-    .ForYouBar::-webkit-scrollbar {
-        display: none;
-    }
-
-    .TVShowsBar::-webkit-scrollbar {
-        display: none;
-    }
-
-    .MoviesBar::-webkit-scrollbar {
-        display: none;
     }
 
     .ForYouBar img,
     .TVShowsBar img,
     .MoviesBar img {
-        width: 200px;
-        height: 275px;
+        height: 280px;
+        width: 190px;
         border-radius: 4px 4px 4px 4px;
-        margin-right: 10px;
-        margin-bottom: 5px;
         border: 2px solid #D81E5B;
+    }
+
+    .HPbutton {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+        margin-right: 0.79rem;
+    }
+
+    .ForYouBar::-webkit-scrollbar,
+    .TVShowsBar::-webkit-scrollbar,
+    .MoviesBar::-webkit-scrollbar {
+        display: none;
     }
 
     .bottomLine {
@@ -127,30 +232,34 @@ body {
         height: 150px;
         background-color: black;
     }
-    .footer{
+
+    .footer {
         border-top: 5px solid #D81E5B;
         padding: 5rem;
         display: flex;
         justify-content: space-around;
-        
-    
+
+
     }
-    
-    .footer h3{
+
+    .footer h3 {
         font-size: 15px;
         font-weight: 300;
         padding-top: 5px;
     }
-    .footer ul{
+
+    .footer ul {
         font-size: small;
         padding: 10px;
-        list-style-type:disc
+        list-style-type: disc
     }
-    .links{
+
+    .links {
         text-decoration: none;
-    
+
     }
-    .footer h2{
+
+    .footer h2 {
         font-size: 15px;
         padding-top: 5px;
         padding-bottom: 10px;
@@ -160,6 +269,32 @@ body {
 
 @media (max-width: 1200px) and (min-width: 776px) {
 
+    .prev,
+    .next {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #D81E5B;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+
+
+
     .top {
         justify-content: space-between;
         background-color: #D81E5B;
@@ -218,35 +353,75 @@ body {
         border-radius: 0 4px 4px 0;
     }
 
-    .ForYou,
-    .TVShows,
-    .Movies {
-        padding: 30px 25px 0 25px;
-        font-weight: 600;
+    #dropdownButton {
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-left: 10px;
+        padding: 5px;
+        font-weight: 550;
+        font-size: 15px;
     }
+
+    #dropdownButton:hover {
+        background-color: white;
+        color: #D81E5B;
+        border: 2px solid #D81E5B;
+        cursor: pointer;
+    }
+
+    .dropdownContent {
+        display: none;
+        /* Hidden by default */
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        right: 0;
+        margin-top: 9px;
+    }
+
+    .dropdownContent a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdownContent a:hover {
+        background-color: #D81E5B;
+        color: white;
+
+    }
+
+
 
     .CategoryTitle {
         font-family: Montserrat;
         padding-bottom: 15px;
     }
 
+    .ForYou,
+    .TVShows,
+    .Movies {
+        position: relative;
+        overflow: hidden;
+        padding: 30px 25px 0 25px;
+        font-weight: 600;
+    }
+
     .ForYouBar,
     .TVShowsBar,
     .MoviesBar {
         display: flex;
-        justify-content: space-between;
+        transition: transform 0.5s ease;
         align-items: center;
-        overflow-x: auto;
     }
 
-    .ForYouBar::-webkit-scrollbar {
-        display: none;
-    }
-
-    .TVShowsBar::-webkit-scrollbar {
-        display: none;
-    }
-
+    .ForYouBar::-webkit-scrollbar,
+    .TVShowsBar::-webkit-scrollbar,
     .MoviesBar::-webkit-scrollbar {
         display: none;
     }
@@ -254,10 +429,9 @@ body {
     .ForYouBar img,
     .TVShowsBar img,
     .MoviesBar img {
-        width: 200px;
-        height: 275px;
+        height: 200px;
         border-radius: 4px 4px 4px 4px;
-        margin-right: 10px;
+        margin-right: 1.35%;
         margin-bottom: 5px;
         border: 2px solid #D81E5B;
     }
@@ -272,30 +446,34 @@ body {
         height: 150px;
         background-color: black;
     }
-    .footer{
+
+    .footer {
         border-top: 5px solid #D81E5B;
         padding: 5rem;
         display: flex;
         justify-content: space-around;
-        
-    
+
+
     }
-    
-    .footer h3{
+
+    .footer h3 {
         font-size: 15px;
         font-weight: 300;
         padding-top: 5px;
     }
-    .footer ul{
+
+    .footer ul {
         font-size: small;
         padding: 10px;
-        list-style-type:disc
+        list-style-type: disc
     }
-    .links{
+
+    .links {
         text-decoration: none;
-    
+
     }
-    .footer h2{
+
+    .footer h2 {
         font-size: 15px;
         padding-top: 5px;
         padding-bottom: 10px;
@@ -361,6 +539,49 @@ body {
         border-radius: 0 4px 4px 0;
     }
 
+    #dropdownButton {
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-left: 10px;
+        padding: 5px;
+        font-weight: 550;
+        font-size: 15px;
+    }
+
+    #dropdownButton:hover {
+        background-color: white;
+        color: #D81E5B;
+        border: 2px solid #D81E5B;
+        cursor: pointer;
+    }
+
+    .dropdownContent {
+        display: none;
+        /* Hidden by default */
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        right: 0;
+        margin-top: 9px;
+    }
+
+    .dropdownContent a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdownContent a:hover {
+        background-color: #D81E5B;
+        color: white;
+
+    }
+
     .ForYou,
     .TVShows,
     .Movies {
@@ -415,30 +636,34 @@ body {
         height: 150px;
         background-color: black;
     }
-    .footer{
+
+    .footer {
         border-top: 5px solid #D81E5B;
         padding: 5rem;
         display: flex;
         justify-content: space-around;
-        
-    
+
+
     }
-    
-    .footer h3{
+
+    .footer h3 {
         font-size: 15px;
         font-weight: 300;
         padding-top: 5px;
     }
-    .footer ul{
+
+    .footer ul {
         font-size: small;
         padding: 10px;
-        list-style-type:disc
+        list-style-type: disc
     }
-    .links{
+
+    .links {
         text-decoration: none;
-    
+
     }
-    .footer h2{
+
+    .footer h2 {
         font-size: 15px;
         padding-top: 5px;
         padding-bottom: 10px;
