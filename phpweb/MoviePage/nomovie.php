@@ -4,7 +4,7 @@ include ("../LogInPage/connection.php");
 include ("../LogInPage/functions.php");
 include ("../HomePage/search.php");
 $user_data = check_login($conn);
-$api_key="8ca6c40d2f4e3a85543f56e8c7b0fc2f";
+$api_key = "8ca6c40d2f4e3a85543f56e8c7b0fc2f";
 
 ?>
 
@@ -26,34 +26,34 @@ $api_key="8ca6c40d2f4e3a85543f56e8c7b0fc2f";
         <a href="../HomePage/HomePage.php"><img src="../materials/HomePage/logo2.png" alt="no image found"></a>
       </button>
       <button class="btn"><a href="../HomePage/HomePage.php">Home</a></button>
-      <button class="btn">TV Shows</button>
-      <button class="btn">Movies</button>
-      <button class="btn">New & Popular</button>
+      <button class="btn"><a href="../NetflixShows/NetflixShows.php">Netflix</a></button>
+      <button class="btn"><a href="../DisneyPlusShows/DisneyPlusShows.php">Disney+</a></button>
     </div>
     <div class="search-container">
-                <form method="POST" class ="search">
-                <div class="searchanddrop">
-                <input id="show_name" name="show_name"class="search-bar" type="text" placeholder="What are you watching today?" autocomplete="off">
-                <div id="suggestions" class="suggestions" style="display: none;"></div>
-                </div>
-                <button class="search-btn" type="submit">
-                <img src="../materials/HomePage/lupa2.png">
-                 </button>
-                </form>
-                
-                <div>
-                    <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
-                    <div id="dropdownMenu" class="dropdownContent">
-                        <a href="">Acount Details</a>
-                        <a href="../LogInPage/logout.php">Log Out</a>
-                    </div>
-                </div>
-            </div>
+      <form method="POST" class="search">
+        <div class="searchanddrop">
+          <input id="show_name" name="show_name" class="search-bar" type="text"
+            placeholder="What are you watching today?" autocomplete="off">
+          <div id="suggestions" class="suggestions" style="display: none;"></div>
+        </div>
+        <button class="search-btn" type="submit">
+          <img src="../materials/HomePage/lupa2.png">
+        </button>
+      </form>
+
+      <div>
+        <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
+        <div id="dropdownMenu" class="dropdownContent">
+          <a href="">Acount Details</a>
+          <a href="../LogInPage/logout.php">Log Out</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class ="notitle">
+  <div class="notitle">
     <h1>No movie with this name found...</h1>
     <p>Maybe try another title?</p>
-</div>
+  </div>
   <div class="footer">
     <div class="contacts">
       <h2>Contacts</h2>
@@ -84,4 +84,4 @@ $api_key="8ca6c40d2f4e3a85543f56e8c7b0fc2f";
   <script src="../HomePage/HomePageScript.js"></script>
 </body>
 
-</html> 
+</html>

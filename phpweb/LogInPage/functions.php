@@ -180,7 +180,7 @@ function get_characters_and_photo($api_key, $show_id, $actors, $linktype)
   }
 }
 
-function get_home_page_details($api_key, $conn, $NorD)
+function get_home_page_details($api_key, $conn, $NorD, $ifTitle)
 {
 
   if ($NorD === 0) { //netflix
@@ -192,17 +192,35 @@ function get_home_page_details($api_key, $conn, $NorD)
       while ($row = $result->fetch_assoc()) {
         $HPtitle = $row["title"];
         if (file_exists("../materials/HomePage/$HPtitle.jpg")) {
-          echo '<form method="POST">
+          if ($ifTitle === 0) {
+            echo '<form method="POST">
           <input type="hidden" name="show_name" value="' . $HPtitle . '">
           <button type="submit" class="HPbutton">
             <img src="../materials/HomePage/' . $HPtitle . '.jpg">
           </button>
-        </form>';
-          //echo "<img src='../materials/HomePage/$HPtitle.jpg'>";
+          </form>';
+          } else {
+            echo '<div class="gridElement"><form method="POST">
+          <input type="hidden" name="show_name" value="' . $HPtitle . '">
+          <button type="submit" class="HPbutton">
+            <img src="../materials/HomePage/' . $HPtitle . '.jpg">
+          </button>
+          </form>
+          <p>' . $HPtitle . '</p>
+          </div>';
+          }
         } else {
-          echo '<button class="HPbutton">
+          if ($ifTitle === 0) {
+            echo '<button class="HPbutton">
             <img src="../materials/npf.png">
           </button>';
+          } else {
+            echo '<div class="gridElement"><button class="HPbutton">
+            <img src="../materials/npf.png">
+          </button>
+          <p>' . $HPtitle . '</p>
+          </div>';
+          }
         }
       }
     }
@@ -215,16 +233,35 @@ function get_home_page_details($api_key, $conn, $NorD)
       while ($row = $result->fetch_assoc()) {
         $HPtitle = $row["title"];
         if (file_exists("../materials/HomePage/$HPtitle.jpg")) {
-          echo '<form method="POST">
+          if ($ifTitle === 0) {
+            echo '<form method="POST">
           <input type="hidden" name="show_name" value="' . $HPtitle . '">
           <button type="submit" class="HPbutton">
             <img src="../materials/HomePage/' . $HPtitle . '.jpg">
           </button>
-        </form>';
+          </form>';
+          } else {
+            echo '<div class="gridElement"><form method="POST">
+          <input type="hidden" name="show_name" value="' . $HPtitle . '">
+          <button type="submit" class="HPbutton">
+            <img src="../materials/HomePage/' . $HPtitle . '.jpg">
+          </button>
+          </form>
+          <p>' . $HPtitle . '</p>
+          </div>';
+          }
         } else {
-          echo '<button class="HPbutton">
+          if ($ifTitle === 0) {
+            echo '<button class="HPbutton">
             <img src="../materials/npf.png">
           </button>';
+          } else {
+            echo '<div class="gridElement"><button class="HPbutton">
+            <img src="../materials/npf.png">
+          </button>
+          <p>' . $HPtitle . '</p>
+          </div>';
+          }
         }
       }
     }

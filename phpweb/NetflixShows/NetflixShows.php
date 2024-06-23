@@ -2,28 +2,31 @@
 session_start();
 include ("../LogInPage/connection.php");
 include ("../LogInPage/functions.php");
-include ("search.php");
+include ("../HomePage/search.php");
 $user_data = check_login($conn);
+$api_key = "8ca6c40d2f4e3a85543f56e8c7b0fc2f";
+
 ?>
+
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MoX</title>
-    <link rel="stylesheet" href="../HomePage/HomePage.css">
+    <link rel="stylesheet" href="../NetflixShows/NetflixShows.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <?php $api_key = '8ca6c40d2f4e3a85543f56e8c7b0fc2f';
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "mox"; ?>
     <div class="top">
         <div class="btn-container">
-            <button class="btn"><img src="../materials/HomePage/logo2.png" alt="no image found"></button>
-            <button class="btn"><a>Home</a></button>
-            <button class="btn"><a href="../NetflixShows/NetflixShows.php">Netflix</a></button>
+            <button class="btn">
+                <a href="../HomePage/HomePage.php"><img src="../materials/HomePage/logo2.png" alt="no image found"></a>
+            </button>
+            <button class="btn"><a href="../HomePage/HomePage.php">Home</a></button>
+            <button class="btn"><a>Netflix</a></button>
             <button class="btn"><a href="../DisneyPlusShows/DisneyPlusShows.php">Disney+</a></button>
         </div>
         <div class="search-container">
@@ -46,37 +49,12 @@ $user_data = check_login($conn);
                 </div>
             </div>
         </div>
-
     </div>
-    <div class="ForYou">
-        <h2 class="CategoryTitle">For You:</h2>
-        <div class="ForYouBar">
-            <?php
-            get_home_page_details($api_key, $conn, 2, 0);
-            ?>
-        </div>
-        <button class="prev" onclick="moveSlider1(-1)"><b>&#10094;</b></button>
-        <button class="next" onclick="moveSlider1(1)"><b>&#10095;</b></button>
-    </div>
-    <div class="TVShows">
-        <h2 class="CategoryTitle">Netflix Shows:</h2>
-        <div class="TVShowsBar">
-            <?php
-            get_home_page_details($api_key, $conn, 0, 0);
-            ?>
-        </div>
-        <button class="prev" onclick="moveSlider2(-1)"><b>&#10094;</b></button>
-        <button class="next" onclick="moveSlider2(1)"><b>&#10095;</b></button>
-    </div>
-    <div class="Movies">
-        <h2 class="CategoryTitle">Disney+ Shows:</h2>
-        <div class="MoviesBar">
-            <?php
-            get_home_page_details($api_key, $conn, 1, 0);
-            ?>
-        </div>
-        <button class="prev" onclick="moveSlider3(-1)"><b>&#10094;</b></button>
-        <button class="next" onclick="moveSlider3(1)"><b>&#10095;</b></button>
+    <h1>Netflix Shows:</h1>
+    <div class = "Ncontainer">
+        <?php
+        get_home_page_details($api_key, $conn, 0, 1);
+        ?>
     </div>
     <div class="footer">
         <div class="contacts">
@@ -102,5 +80,10 @@ $user_data = check_login($conn);
             </ul>
         </div>
     </div>
-    <script src="HomePageScript.js"></script>
+    <?php
+    $conn->close();
+    ?>
+    <script src="../HomePage/HomePageScript.js"></script>
 </body>
+
+</html>

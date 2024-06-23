@@ -15,7 +15,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $show_name, $show_name);
 $stmt->execute();
 $result = $stmt->get_result();
-if ($result && $result-> num_rows > 0) {
+if ($result && $result->num_rows > 0) {
   $row = $result->fetch_assoc();
   $description = $row['description'];
   $s_id = $row['show_id'];
@@ -62,9 +62,8 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
         <a href="../HomePage/HomePage.php"><img src="../materials/HomePage/logo2.png" alt="no image found"></a>
       </button>
       <button class="btn"><a href="../HomePage/HomePage.php">Home</a></button>
-      <button class="btn">TV Shows</button>
-      <button class="btn">Movies</button>
-      <button class="btn">New & Popular</button>
+      <button class="btn"><a href="../NetflixShows/NetflixShows.php">Netflix</a></button>
+      <button class="btn"><a href="../DisneyPlusShows/DisneyPlusShows.php">Disney+</a></button>
     </div>
     <div class="search-container">
       <form method="POST" class="search">

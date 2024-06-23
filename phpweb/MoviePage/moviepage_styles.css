@@ -15,11 +15,10 @@ body {
 }
 
 a {
-  color: inherit;
-  /* This sets the link color to inherit from its parent element */
+  color: white;
   text-decoration: none;
-  /* This removes the underline */
 }
+
 
 
 @media (min-width: 1201px) {
@@ -278,6 +277,7 @@ a {
     cursor: pointer;
     outline: none;
     margin-right: 1rem;
+    margin-top: 2rem;
   }
 
 
@@ -287,7 +287,6 @@ a {
 
   .poster {
     display: flex;
-    margin-top: 2rem;
   }
 
   .poster img {
@@ -319,7 +318,6 @@ a {
 
   .links {
     text-decoration: none;
-
   }
 
   .footer h2 {

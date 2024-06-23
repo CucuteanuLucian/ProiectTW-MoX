@@ -14,7 +14,11 @@ body {
     color: white;
 }
 
-
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 @media (min-width: 1201px) {
