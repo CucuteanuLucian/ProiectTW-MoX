@@ -3,7 +3,7 @@ include ("../LogInPage/connection.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(isset($_POST['show_name'])){
-        $show_name = htmlspecialchars($_POST['show_name']);
+        $show_name = $_POST['show_name'];
         $_SESSION['show_name'] = $show_name;
         header("Location: ../MoviePage/moviepage.php");
         exit();
@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if($result-> num_rows > 0){
         while ($row = $result->fetch_assoc()){
-            echo "<div class='suggestion-item'>" . htmlspecialchars($row['title']) . "</div>";
+            echo "<div class='suggestion-item'>" . $row['title'] . "</div>";
         }
     } else {
         echo "<div class='suggestion-item'>No suggestions found</div>";
@@ -26,4 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 }
 }
+// alta metoda post care iti ia show id???
 ?>
+
+

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 @font-face {
   font-family: Montserrat;
   src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
@@ -14,8 +15,10 @@ body {
 }
 
 a {
-  color: inherit; /* This sets the link color to inherit from its parent element */
-  text-decoration: none; /* This removes the underline */
+  color: inherit;
+  /* This sets the link color to inherit from its parent element */
+  text-decoration: none;
+  /* This removes the underline */
 }
 
 
@@ -27,9 +30,10 @@ a {
     align-content: center;
     height: 50px;
     position: relative;
-    width:100%
+    width: 100%
   }
-  #dropdownButton{
+
+  #dropdownButton {
     background-color: transparent;
     border: 2px solid white;
     border-radius: 10px;
@@ -38,47 +42,51 @@ a {
     padding: 5px;
     font-weight: 550;
     font-size: 15px;
-}
-#dropdownButton:hover{
+  }
+
+  #dropdownButton:hover {
     background-color: white;
     color: #D81E5B;
     border: 2px solid #D81E5B;
     cursor: pointer;
-}
+  }
 
-.dropdownContent {
-    display: none; /* Hidden by default */
+  .dropdownContent {
+    display: none;
+    /* Hidden by default */
     position: absolute;
-    background-color: rgba(0,0,0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     right: 0;
     margin-top: 9px;
-}
+  }
 
-.dropdownContent a {
+  .dropdownContent a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
+  }
 
-.dropdownContent a:hover {
+  .dropdownContent a:hover {
     background-color: #D81E5B;
     color: white;
 
-}
+  }
 
   .btn-container {
     display: flex;
     width: 500px;
     justify-content: space-evenly;
   }
+
   .btn img {
     width: 100px;
     height: 50px;
   }
+
   .btn {
     background-color: #d81e5b;
     font-weight: 600;
@@ -90,107 +98,122 @@ a {
     cursor: pointer;
   }
 
-  .search{
-    display:flex;
-}
-.searchanddrop{
-    position:relative;
+  .search {
+    display: flex;
+  }
+
+  .searchanddrop {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 315px;
-}
-.suggestions{
+  }
+
+  .suggestions {
     margin-top: 20px;
-    background-color: rgba(0,0,0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    top:100%;
-    left:0;
-    max-width:100%;
-    z-index:1;
-}
-.suggestion-item{
+    top: 100%;
+    left: 0;
+    max-width: 100%;
+    z-index: 1;
+  }
+
+  .suggestion-item {
     padding: 10px;
     cursor: pointer;
     max-width: 100%;
-}
+  }
 
-.suggestion-item:hover{
+  .suggestion-item:hover {
     background-color: #D81E5B;
-}
+  }
 
-.search-container {
+  .search-container {
     padding-top: 10px;
     display: flex;
     align-content: center;
     margin-right: 30px;
-}
+  }
 
-.search-bar {
+  .search-bar {
     width: 300px;
     padding: 5px;
     border: none;
     border-radius: 4px;
-}
+  }
 
-.search-btn img {
+  .search-btn img {
     height: 25px;
     width: 25px;
-}
+  }
 
-.search-btn {
+  .search-btn {
     padding: 2px;
     cursor: pointer;
     background-color: white;
     border: none;
     border-radius: 0 4px 4px 0;
-    height:100%;
-}
+    height: 100%;
+  }
+
   .movie {
     margin-top: 5rem;
     margin-left: 5rem;
   }
+
   .movie h1 {
     margin-bottom: 1rem;
     max-width: 800px;
   }
+
   .poster_and_trailer {
     display: flex;
     flex-wrap: wrap;
   }
+
   .description {
     margin: 1rem;
     flex: 1;
     max-width: 500px;
   }
+
   .description h3 {
     margin-bottom: 1rem;
     font-size: 2rem;
   }
+
   .description p {
     text-align: left;
     font-size: 1.25rem;
   }
+
   .description h1 {
     margin-top: 2rem;
   }
+
   .poster_and_trailer img {
     height: 30rem;
-    width:auto;
+    width: auto;
     border: 2px solid rgba(216, 30, 91, 1);
     margin: 5px 10px 5px 0;
   }
-  .poster_and_trailer iframe{
+
+  .poster_and_trailer iframe {
     height: 30rem;
     border: 2px solid rgba(216, 30, 91, 1);
     margin: 5px 10px 5px 0;
   }
+
   .details {
     display: flex;
     max-width: 800px;
   }
+
   .details p {
     margin-right: 1rem;
   }
+
   .genre-container button {
     border-radius: 15px;
     padding: 5px;
@@ -202,6 +225,7 @@ a {
     margin-right: 0.5rem;
     cursor: pointer;
   }
+
   .actors-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -209,13 +233,16 @@ a {
     width: 50rem;
     margin-bottom: 5rem;
   }
+
   .actor-name {
     margin-left: 1rem;
     margin-top: 1rem;
   }
+
   .actor-name h5 {
     font-size: 1rem;
   }
+
   .grid-element {
     display: flex;
     width: 16rem;
@@ -225,55 +252,71 @@ a {
     height: 5rem;
     border-radius: 50%;
   }
+
   .bottom-half {
     display: flex;
     margin: 5rem;
     flex-wrap: wrap;
   }
-  .recommendations {
-    margin-left: 1rem;
+
+
+  .RECbutton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    margin-right: 1rem;
   }
+
+
   .poster-and-trailer {
     max-width: 60%;
   }
+
   .poster {
     display: flex;
     margin-top: 2rem;
     margin-right: 7rem;
   }
+
   .poster img {
     height: 15rem;
-    margin-right: 1rem;
+    border-radius: 4px;
     border: 2px solid rgba(216, 30, 91, 1);
   }
-  .footer{
+
+  .footer {
     padding: 5rem;
     display: flex;
     justify-content: space-around;
     border-top: 0.5rem solid rgba(216, 30, 91, 1);
-    
 
-}
 
-.footer h3{
+  }
+
+  .footer h3 {
     font-size: 15px;
     font-weight: 300;
     padding-top: 5px;
-}
-.footer ul{
+  }
+
+  .footer ul {
     font-size: small;
     padding: 10px;
-    list-style-type:disc
-}
-.links{
+    list-style-type: disc
+  }
+
+  .links {
     text-decoration: none;
 
-}
-.footer h2{
+  }
+
+  .footer h2 {
     font-size: 15px;
     padding-top: 5px;
     padding-bottom: 10px;
-}
+  }
 }
 
 @media (max-width: 1200px) and (min-width: 776px) {
@@ -290,10 +333,12 @@ a {
     padding: 0 25px;
     justify-content: space-evenly;
   }
+
   .btn img {
     width: 100px;
     height: 50px;
   }
+
   .btn {
     background-color: #d81e5b;
     font-weight: 600;
@@ -312,6 +357,7 @@ a {
     align-content: center;
     padding-right: 25px;
   }
+
   .search-bar {
     width: 300px;
     padding: 5px;
@@ -323,6 +369,7 @@ a {
     height: 25px;
     width: 25px;
   }
+
   .search-btn {
     padding: 2px;
     cursor: pointer;
@@ -330,7 +377,8 @@ a {
     border: none;
     border-radius: 0 4px 4px 0;
   }
-  #dropdownButton{
+
+  #dropdownButton {
     background-color: transparent;
     border: 2px solid white;
     border-radius: 10px;
@@ -339,81 +387,95 @@ a {
     padding: 5px;
     font-weight: 550;
     font-size: 15px;
-}
-#dropdownButton:hover{
+  }
+
+  #dropdownButton:hover {
     background-color: white;
     color: #D81E5B;
     border: 2px solid #D81E5B;
     cursor: pointer;
-}
+  }
 
-.dropdownContent {
-    display: none; /* Hidden by default */
+  .dropdownContent {
+    display: none;
+    /* Hidden by default */
     position: absolute;
-    background-color: rgba(0,0,0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     right: 0;
     margin-top: 9px;
-}
+  }
 
-.dropdownContent a {
+  .dropdownContent a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
+  }
 
-.dropdownContent a:hover {
+  .dropdownContent a:hover {
     background-color: #D81E5B;
     color: white;
 
-}
+  }
+
   .movie {
     margin-top: 5rem;
     margin-left: 5rem;
   }
+
   .movie h1 {
     margin-bottom: 1rem;
     font-size: 65px;
   }
+
   .poster_and_trailer {
     display: flex;
     flex-wrap: wrap;
   }
+
   .description {
     margin: 1rem;
   }
+
   .description h3 {
     margin-bottom: 1rem;
     font-size: 3rem;
   }
+
   .description p {
     text-align: left;
     font-size: 1.5rem;
   }
+
   .description h1 {
     margin-top: 2rem;
   }
+
   .poster_and_trailer img {
     height: 30rem;
     border: 2px solid rgba(216, 30, 91, 1);
     margin: 5px 10px 5px 0;
   }
-  .poster_and_trailer iframe{
+
+  .poster_and_trailer iframe {
     height: 30rem;
     border: 2px solid rgba(216, 30, 91, 1);
     margin: 5px 10px 5px 0;
   }
+
   .details {
     display: flex;
   }
+
   .details p {
     margin-right: 1rem;
     margin-bottom: 1rem;
     font-size: 25px;
   }
+
   .genre-container button {
     border-radius: 15px;
     padding: 5px;
@@ -426,6 +488,7 @@ a {
     margin-right: 0.5rem;
     cursor: pointer;
   }
+
   .actors-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -433,16 +496,20 @@ a {
     width: 50rem;
     margin-bottom: 3rem;
   }
+
   .actor-name {
     margin-left: 1rem;
     margin-top: 1rem;
   }
+
   .actor-name h5 {
     font-size: 2rem;
   }
+
   .actor-name p {
     font-size: 1.5rem;
   }
+
   .grid-element {
     display: flex;
   }
@@ -451,52 +518,60 @@ a {
     height: 6rem;
     border-radius: 50%;
   }
+
   .bottom-half {
     display: flex;
     margin: 5rem;
     flex-wrap: wrap;
   }
+
   .poster {
     display: flex;
     margin-top: 2rem;
     margin-right: 7rem;
   }
+
   .poster img {
     height: 15rem;
     margin-right: 1rem;
     border: 2px solid rgba(216, 30, 91, 1);
   }
+
   .recommendations h2 {
     font-size: 2.5rem;
   }
-  .footer{
+
+  .footer {
     padding: 5rem;
     display: flex;
     justify-content: space-around;
     border-top: 0.5rem solid rgba(216, 30, 91, 1);
-    
 
-}
 
-.footer h3{
+  }
+
+  .footer h3 {
     font-size: 15px;
     font-weight: 300;
     padding-top: 5px;
-}
-.footer ul{
+  }
+
+  .footer ul {
     font-size: small;
     padding: 10px;
-    list-style-type:disc
-}
-.links{
+    list-style-type: disc
+  }
+
+  .links {
     text-decoration: none;
 
-}
-.footer h2{
+  }
+
+  .footer h2 {
     font-size: 15px;
     padding-top: 5px;
     padding-bottom: 10px;
-}
+  }
 }
 
 @media (max-width: 1200px) and (min-width: 777px) {
@@ -513,10 +588,12 @@ a {
     width: 500px;
     justify-content: space-evenly;
   }
+
   .btn img {
     width: 100px;
     height: 50px;
   }
+
   .btn {
     background-color: #d81e5b;
     font-weight: 600;
@@ -535,6 +612,7 @@ a {
     align-content: center;
     padding-right: 25px;
   }
+
   .search-bar {
     width: 200px;
     padding: 5px;
@@ -546,6 +624,7 @@ a {
     height: 25px;
     width: 25px;
   }
+
   .search-btn {
     padding: 2px;
     cursor: pointer;
@@ -553,50 +632,62 @@ a {
     border: none;
     border-radius: 0 4px 4px 0;
   }
+
   .movie {
     margin-top: 5rem;
     margin-left: 5rem;
   }
+
   .movie h1 {
     margin-bottom: 1rem;
     font-size: 65px;
   }
+
   .poster_and_trailer {
     display: flex;
     flex-wrap: wrap;
   }
+
   .description {
     margin: 1rem;
   }
+
   .description h3 {
     margin-bottom: 1rem;
     font-size: 3rem;
   }
+
   .description p {
     text-align: left;
     font-size: 1.5rem;
   }
+
   .description h1 {
     margin-top: 2rem;
   }
+
   .poster_and_trailer img {
     height: 15rem;
     border: 2px solid rgba(216, 30, 91, 1);
     margin: 5px 10px 5px 0;
   }
-  .poster_and_trailer iframe{
+
+  .poster_and_trailer iframe {
     height: 25rem;
     border: 2px solid rgba(216, 30, 91, 1);
     margin: 5px 10px 5px 0;
   }
+
   .details {
     display: flex;
   }
+
   .details p {
     margin-right: 1rem;
     margin-bottom: 1rem;
     font-size: 25px;
   }
+
   .genre-container button {
     border-radius: 15px;
     padding: 5px;
@@ -608,6 +699,7 @@ a {
     margin-right: 0.5rem;
     cursor: pointer;
   }
+
   .actors-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -615,16 +707,20 @@ a {
     width: 100%;
     margin-bottom: 3rem;
   }
+
   .actor-name {
     margin-left: 1rem;
     margin-top: 1rem;
   }
+
   .actor-name h5 {
     font-size: 2rem;
   }
+
   .actor-name p {
     font-size: 1.5rem;
   }
+
   .grid-element {
     display: flex;
   }
@@ -633,21 +729,25 @@ a {
     height: 6rem;
     border-radius: 50%;
   }
+
   .bottom-half {
     display: flex;
     margin: 5rem;
     flex-wrap: wrap;
   }
+
   .poster {
     display: flex;
     margin-top: 2rem;
     margin-right: 7rem;
   }
+
   .poster img {
     height: 15rem;
     margin-right: 1rem;
     border: 2px solid rgba(216, 30, 91, 1);
   }
+
   .recommendations h2 {
     font-size: 2.5rem;
   }
@@ -666,9 +766,11 @@ a {
     display: flex;
     justify-content: space-evenly;
   }
+
   .btn img {
     width: 60px;
   }
+
   .btn {
     background-color: #d81e5b;
     font-weight: 600;
@@ -681,8 +783,8 @@ a {
     padding-right: 10px;
   }
 
-  
-  #dropdownButton{
+
+  #dropdownButton {
     background-color: transparent;
     border: 2px solid white;
     border-radius: 10px;
@@ -691,81 +793,95 @@ a {
     padding: 5px;
     font-weight: 550;
     font-size: 15px;
-}
-#dropdownButton:hover{
+  }
+
+  #dropdownButton:hover {
     background-color: white;
     color: #D81E5B;
     border: 2px solid #D81E5B;
     cursor: pointer;
-}
+  }
 
-.dropdownContent {
-    display: none; /* Hidden by default */
+  .dropdownContent {
+    display: none;
+    /* Hidden by default */
     position: absolute;
-    background-color: rgba(0,0,0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     right: 0;
     margin-top: 9px;
-}
+  }
 
-.dropdownContent a {
+  .dropdownContent a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
+  }
 
-.dropdownContent a:hover {
+  .dropdownContent a:hover {
     background-color: #D81E5B;
     color: white;
 
-}
+  }
+
   .movie {
     margin-top: 5rem;
     margin-left: 2rem;
   }
+
   .movie h1 {
     margin-bottom: 1rem;
     font-size: 30px;
   }
+
   .poster_and_trailer {
     display: flex;
     flex-wrap: wrap;
   }
+
   .description {
     margin: 1rem 1rem 1rem 0rem;
   }
+
   .description h3 {
     margin-bottom: 1rem;
     font-size: 2rem;
   }
+
   .description p {
     text-align: left;
     font-size: 1rem;
   }
+
   .description h1 {
     margin-top: 2rem;
   }
+
   .poster_and_trailer img {
     height: 11rem;
     border: 2px solid rgba(216, 30, 91, 1);
     margin: 5px 10px 5px 0;
   }
-  .poster_and_trailer iframe{
+
+  .poster_and_trailer iframe {
     height: 20rem;
     border: 2px solid rgba(216, 30, 91, 1);
     margin: 5px 10px 5px 0;
   }
+
   .details {
     display: flex;
   }
+
   .details p {
     margin-right: 1rem;
     margin-bottom: 1rem;
     font-size: 15px;
   }
+
   .genre-container button {
     border-radius: 15px;
     padding: 5px;
@@ -777,6 +893,7 @@ a {
     margin-right: 0.5rem;
     cursor: pointer;
   }
+
   .actors-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -784,16 +901,20 @@ a {
     width: 100%;
     margin-bottom: 3rem;
   }
+
   .actor-name {
     margin-left: 1rem;
     margin-top: 1rem;
   }
+
   .actor-name h5 {
     font-size: 1rem;
   }
+
   .actor-name p {
     font-size: 1rem;
   }
+
   .grid-element {
     display: flex;
   }
@@ -802,54 +923,62 @@ a {
     height: 4rem;
     border-radius: 50%;
   }
+
   .bottom-half {
     display: flex;
     margin: 5rem 5rem 5rem 2rem;
     flex-wrap: wrap;
   }
+
   .poster {
     display: flex;
     margin-top: 2rem;
     margin-right: 7rem;
   }
+
   .poster img {
     height: 9rem;
     margin-right: 1rem;
     border: 2px solid rgba(216, 30, 91, 1);
   }
+
   .recommendations {
     width: 100%;
   }
+
   .recommendations h2 {
     font-size: 1.5rem;
   }
-  .footer{
+
+  .footer {
     padding: 5rem;
     display: flex;
     justify-content: space-around;
     border-top: 0.5rem solid rgba(216, 30, 91, 1);
-    
 
-}
 
-.footer h3{
+  }
+
+  .footer h3 {
     font-size: 15px;
     font-weight: 300;
     padding-top: 5px;
-}
-.footer ul{
+  }
+
+  .footer ul {
     font-size: small;
     padding: 10px;
-    list-style-type:disc
-}
-.links{
+    list-style-type: disc
+  }
+
+  .links {
     text-decoration: none;
 
-}
-.footer h2{
+  }
+
+  .footer h2 {
     font-size: 15px;
     padding-top: 5px;
     padding-bottom: 10px;
+  }
 }
-}
-

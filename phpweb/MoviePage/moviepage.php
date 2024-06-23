@@ -4,10 +4,10 @@ include ("../LogInPage/connection.php");
 include ("../LogInPage/functions.php");
 include ("../HomePage/search.php");
 $user_data = check_login($conn);
-$api_key="8ca6c40d2f4e3a85543f56e8c7b0fc2f";
+$api_key = "8ca6c40d2f4e3a85543f56e8c7b0fc2f";
 
-if(isset($_SESSION['show_name'])){
-  $show_name = htmlspecialchars($_SESSION['show_name']);
+if (isset($_SESSION['show_name'])) {
+  $show_name = $_SESSION['show_name'];
 }
 
 $sql = "SELECT * FROM netflix_shows where title LIKE ? UNION SELECT * FROM disneyplus_shows where title LIKE ?";
@@ -17,7 +17,9 @@ $stmt->execute();
 $result = $stmt->get_result();
 if ($result) {
   $row = $result->fetch_assoc();
-  $s_id = $row["show_id"];
+  if (isset($row["show_id"])) {
+    $s_id = $row["show_id"];
+  }
   $description = $row['description'];
   $show_title = $row["title"];
   $type = $row["type"];
@@ -67,24 +69,25 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
       <button class="btn">New & Popular</button>
     </div>
     <div class="search-container">
-                <form method="POST" class ="search">
-                <div class="searchanddrop">
-                <input id="show_name" name="show_name"class="search-bar" type="text" placeholder="What are you watching today?" autocomplete="off">
-                <div id="suggestions" class="suggestions" style="display: none;"></div>
-                </div>
-                <button class="search-btn" type="submit">
-                <img src="../materials/HomePage/lupa2.png">
-                 </button>
-                </form>
-                
-                <div>
-                    <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
-                    <div id="dropdownMenu" class="dropdownContent">
-                        <a href="">Acount Details</a>
-                        <a href="../LogInPage/logout.php">Log Out</a>
-                    </div>
-                </div>
-            </div>
+      <form method="POST" class="search">
+        <div class="searchanddrop">
+          <input id="show_name" name="show_name" class="search-bar" type="text"
+            placeholder="What are you watching today?" autocomplete="off">
+          <div id="suggestions" class="suggestions" style="display: none;"></div>
+        </div>
+        <button class="search-btn" type="submit">
+          <img src="../materials/HomePage/lupa2.png">
+        </button>
+      </form>
+
+      <div>
+        <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
+        <div id="dropdownMenu" class="dropdownContent">
+          <a href="">Acount Details</a>
+          <a href="../LogInPage/logout.php">Log Out</a>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="movie">
     <h1><?php echo $show_title; ?></h1>
@@ -113,7 +116,7 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
   </div>
   <div class="bottom-half">
     <div class="actors-grid">
-      <?php get_characters_and_photo($api_key, $show_id, $actors, $linktype);?>
+      <?php get_characters_and_photo($api_key, $show_id, $actors, $linktype); ?>
     </div>
     <div class="recommendations">
       <h2>You might also like...</h2>
