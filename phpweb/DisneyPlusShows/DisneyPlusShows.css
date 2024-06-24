@@ -23,15 +23,35 @@
   
   @media (min-width: 1201px) {
   
-    .notitle{
-      height:100vh;
+    .grid-element{
+      align-items: center;
+      display: flex;
+      flex-direction: column;
     }
-    .notitle h1{
-       margin: 100px 0 0 100px;
-     }
-     .notitle p{
-      margin-left:100px;
+    .select-container{
+      display:flex;
+      justify-content: center;
+      position: relative;
+      max-width: 250px;
+      margin-left: 1vw;
+      margin-top: 1.5vw;
+
+    }
+    .select-box{
+      text-decoration: none;
+      border:none;
+      appearance: none;
+      padding: 0 30px 0 15px;
+      width:100%;
+      color: white;
+      background-color: rgba(0, 0, 0, 1);
       font-size: 20px;
+      cursor: pointer;
+      background-color: #d81e5b;
+      border-radius: 10px;
+      padding:5px;
+      text-align: center;
+      font-weight: 550;
     }
     .top {
       justify-content: space-between;
@@ -170,7 +190,7 @@
     .Dcontainer {
         display: grid;
         grid-template-columns: repeat(6, 1fr); 
-        padding-left: 0.3vw;
+        padding-left: 1.2vw;
     }
 
     .Dcontainer img {
@@ -180,17 +200,14 @@
         border: 2px solid #D81E5B;
     }
 
-    .Dcontainer form {
-      text-align: center;
-    }
-
     .HPbutton {
       background: none;
       border: none;
+      padding: 0;
       cursor: pointer;
       outline: none;
-      text-align: center;
-      padding-top: 0.8vw;
+      margin-top: 1.2vw;
+      text-align: left;
     }
   
     .poster {
@@ -206,18 +223,11 @@
     .gridElement p {
         text-align: center;
         font-size: 1vw;
-        padding: 0 0.3vw 0 0.3vw;
-    }
-
-    .gridElement {
-        display: grid;
-        justify-content: center;
-        align-items: center;   
     }
     
     h1 {
-        margin-left: 0.8vw;
-        margin-top: 0.8vw;
+        margin-left: 1vw;
+        margin-top: 1vw;
         font-size: 2vw;
     }
   
@@ -226,6 +236,7 @@
       display: flex;
       justify-content: space-around;
       border-top: 0.5rem solid rgba(216, 30, 91, 1);
+      margin-top: 3vw;
     }
   
     .footer h3 {

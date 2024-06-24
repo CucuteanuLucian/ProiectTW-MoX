@@ -51,9 +51,29 @@ $api_key = "8ca6c40d2f4e3a85543f56e8c7b0fc2f";
         </div>
     </div>
     <h1>Netflix Shows:</h1>
-    <div class = "Ncontainer">
+    <form id = "category">
+    <div class="select-container">
+        <select class = "select-box" id = "categorySelect" name = "category">
+            <option value = "none" selected>No filter</option>
+            <option value="Documentaries">Documentaries</option>
+            <option value="International TV Shows">International TV Shows</option>
+            <option value="Crime TV Shows">Crime</option>
+            <option value="Docuseries">Docuseries</option>
+            <option value="Dramas">Dramas</option>
+            <option value="Children & Family Movies">Children & Family Movies</option>
+            <option value="Comedies">Comedies</option>
+            <option value="Thrillers">Thrillers</option>
+            <option value="Horror Movies">Horror</option>
+            <option value="Sci-Fi & Fantasy">Sci-Fi & Fantasy</option>
+            <option value="Independent Movies">Independent Movies</option>
+            <option value="Kids' TV">Kids' TV</option>
+            <option value="Action & Adventure">Action & Adventure</option>
+        </select>
+    </div>
+    </form>
+    <div class = "Ncontainer" id="showList">
         <?php
-        get_home_page_details($api_key, $conn, 0, 1);
+        //get_home_page_details($api_key, $conn, 0, 1);
         ?>
     </div>
     <div class="footer">
@@ -83,6 +103,7 @@ $api_key = "8ca6c40d2f4e3a85543f56e8c7b0fc2f";
     <?php
     $conn->close();
     ?>
+    <script src="filterNetflix.js"></script>
     <script src="../HomePage/HomePageScript.js"></script>
 </body>
 

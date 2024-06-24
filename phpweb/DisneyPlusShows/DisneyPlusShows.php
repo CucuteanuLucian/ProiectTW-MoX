@@ -51,9 +51,28 @@ $api_key = "8ca6c40d2f4e3a85543f56e8c7b0fc2f";
         </div>
     </div>
     <h1>Disney+ Shows:</h1>
-    <div class = "Dcontainer">
+    <form id = "category">
+    <div class="select-container">
+        <select class = "select-box" id = "categorySelect" name = "category">
+            <option value = "none" selected>No filter</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Musical">Musical</option>
+            <option value="Biographical">Biographical</option>
+            <option value="Documentary">Documentary</option>
+            <option value="Animation">Animation</option>
+            <option value="Family">Family</option>
+            <option value="Action-Adventure">Action-Adventure</option>
+            <option value="Coming of Age">Coming of Age</option>
+            <option value="Sci-Fi & Fantasy">Sci-Fi & Fantasy</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Animals & Nature">Animals & Nature</option>
+        </select>
+    </div>
+    </form>
+    <div class = "Dcontainer" id="showList">
         <?php
-        get_home_page_details($api_key, $conn, 1, 1);
+        //get_home_page_details($api_key, $conn, 1, 1);
         ?>
     </div>
     <div class="footer">
@@ -83,6 +102,7 @@ $api_key = "8ca6c40d2f4e3a85543f56e8c7b0fc2f";
     <?php
     $conn->close();
     ?>
+    <script src="filterDisney.js"></script>
     <script src="../HomePage/HomePageScript.js"></script>
 </body>
 
