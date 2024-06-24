@@ -292,3 +292,5 @@ function get_home_page_details($api_key, $conn, $NorD, $ifTitle)
     }
   }
 }
+
+

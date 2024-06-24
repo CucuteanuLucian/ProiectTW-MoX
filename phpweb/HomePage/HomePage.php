@@ -11,9 +11,11 @@ $user_data = check_login($conn);
     <title>MoX</title>
     <link rel="stylesheet" href="../HomePage/HomePage.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas2svg@1.0.22"></script>
 </head>
 
-<body>
+<body class="body">
     <?php $api_key = '8ca6c40d2f4e3a85543f56e8c7b0fc2f';
     $servername = "localhost";
     $username = "root";
@@ -78,6 +80,38 @@ $user_data = check_login($conn);
         <button class="prev" onclick="moveSlider3(-1)"><b>&#10094;</b></button>
         <button class="next" onclick="moveSlider3(1)"><b>&#10095;</b></button>
     </div>
+    <div class="Statistics">
+        <h2>
+            Statistics:
+        </h2>
+        <div class="Genre">
+            <canvas id="GenreChart">
+
+            </canvas>
+            <button onclick="exportAsWebP('GenreChart')">WebP</button>
+            <button onclick="exportAsSVG('GenreChart')">SVG</button>
+            <button onclick="exportAsCSV('GetGenres.php', 'Genre')">CSV</button>
+        </div>
+        <div class="Rating">
+            <canvas id="RatingChart">
+
+            </canvas>
+            <button onclick="exportAsWebP('RatingChart')">WebP</button>
+            <button onclick="exportAsSVG('RatingChart')">SVG</button>
+            <button onclick="exportAsCSV('GetRatings.php', 'Rating')">CSV</button>
+        </div>
+        <div class="Year">
+            <canvas id="YearChart">
+
+            </canvas>
+            <button onclick="exportAsWebP('YearChart')">WebP</button>
+            <button onclick="exportAsSVG('YearChart')">SVG</button>
+            <button onclick="exportAsCSV('GetYears.php', 'Year')">CSV</button>
+        </div>
+
+    </div>
+
+    
     <div class="footer">
         <div class="contacts">
             <h2>Contacts</h2>
@@ -103,4 +137,5 @@ $user_data = check_login($conn);
         </div>
     </div>
     <script src="HomePageScript.js"></script>
+    <script src="ChartScript.js"></script>
 </body>

@@ -4,14 +4,14 @@
 }
 
 @font-face {
-    font-family: Montserrat;
+    font-family: Montserrat ;
     src: url(../Fonts/Montserrat-VariableFont_wght.ttf);
 }
 
-body {
-    background-color: black;
-    font-family: Montserrat;
-    color: white;
+.body {
+    background-color: black ;
+    font-family: Montserrat ;
+    color: white ;
 }
 
 a {
@@ -22,6 +22,33 @@ a {
 
 
 @media (min-width: 1201px) {
+
+    .Statistics h2 {
+        margin-left: 1.5vw;
+        margin-top: 1.5vw;
+    }
+    .Genre {
+        height: 35vw;
+        display: grid;
+        justify-content: center;
+    }
+    
+    .Genre button {
+
+        height: 2vw;
+    }
+
+    .Rating {
+        height: 50vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Year {
+        height: 45vw;
+        display: flex;
+        justify-content: center;
+    }
 
     .prev,
     .next {
@@ -190,7 +217,7 @@ a {
     .Movies {
         position: relative;
         overflow: hidden;
-        padding: 30px 25px 0 25px;
+        padding: 1.5vw 1.5vw 0 1.5vw;
         font-weight: 600;
     }
 
