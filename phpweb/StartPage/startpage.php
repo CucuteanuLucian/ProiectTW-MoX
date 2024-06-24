@@ -32,7 +32,7 @@ include ("../LogInPage/functions.php");
             you don't know what to watch!
           </h1>
           <form class="email" method="post">
-            <input type="text" name="username" class="email-box" placeholder="Username" />
+            <input type="text" name="username" class="email-box" placeholder="Username" autocomplete="off"/>
             <input type="password" name="password" class="email-box" placeholder="Password" />
             <input type="password" name="confirm_password" class="email-box" placeholder="Confirm Password" />
 
@@ -57,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       else {
         $user_id = random_num(20);
         $sql = "insert into users (user_id, username, password) values ('$user_id', '$username', '$password')";
-        //$conn->query($sql);
         mysqli_query($conn, $sql);
 
         header("Location: ../LogInPage/login.php");

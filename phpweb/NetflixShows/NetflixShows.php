@@ -70,9 +70,6 @@ $api_key = "8ca6c40d2f4e3a85543f56e8c7b0fc2f";
     </div>
     </form>
     <div class = "Ncontainer" id="showList">
-        <?php
-        //get_home_page_details($api_key, $conn, 0, 1);
-        ?>
     </div>
     <div class="footer">
         <div class="contacts">

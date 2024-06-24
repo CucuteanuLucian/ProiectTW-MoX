@@ -87,7 +87,6 @@
   
     .dropdownContent {
       display: none;
-      /* Hidden by default */
       position: absolute;
       background-color: rgba(216, 30, 91, 0.6);
       min-width: 160px;
@@ -330,7 +329,6 @@
   
     .dropdownContent {
       display: none;
-      /* Hidden by default */
       position: absolute;
       background-color: rgba(216, 30, 91, 0.6);
       min-width: 160px;
@@ -572,7 +570,6 @@
   
     .dropdownContent {
       display: none;
-      /* Hidden by default */
       position: absolute;
       background-color: rgba(216, 30, 91, 0.6);
       min-width: 160px;

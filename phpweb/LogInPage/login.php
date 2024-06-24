@@ -28,7 +28,7 @@
         <div class="middle-content">
           <h1>Log into your account!</h1>
           <form class="login" method="post">
-            <input type="text" name="username" class="email-box" placeholder="Username" />
+            <input type="text" name="username" class="email-box" placeholder="Username" autocomplete="off"/>
             <input type="password" name="password" class="password-box" placeholder="Password" />
             <input class="register-button" type="submit" value="Login">
           </form>

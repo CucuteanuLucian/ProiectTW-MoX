@@ -12,7 +12,6 @@ function check_login($conn)
 
     }
   }
-  //redirect login
   header("Location: ../LogInPage/login.php");
   die;
 }
@@ -95,7 +94,6 @@ function get_poster($api_key, $show_id, $linktype)
         echo "<img src='$poster_url' class='poster' alt='Movie Poster'>";
       } else {
         echo "<img src='../materials/npf.png' alt='Movie Poster'>";
-        //echo "Poster not found for this movie.";
       }
     } else {
       echo "Failed to fetch data";

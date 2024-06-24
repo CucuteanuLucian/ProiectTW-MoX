@@ -62,17 +62,14 @@ function exportAsWebP(chartId) {
     document.body.removeChild(link);
 }
 
-// Function to export the canvas as an SVG file
 function exportAsSVG(chartId) {
     const canvas = document.getElementById(chartId);
     const width = canvas.width;
     const height = canvas.height;
     const xmlNs = "http://www.w3.org/2000/svg";
-    // Create an SVG element with the same dimensions as the canvas
     const svg = document.createElementNS(xmlNs, "svg");
     svg.setAttributeNS(null, 'width', width);
     svg.setAttributeNS(null, 'height', height);
-    // Convert the canvas to an image and use it in the SVG
     const img = new Image();
     img.src = canvas.toDataURL("image/png");
     const imgElement = document.createElementNS(xmlNs, "image");
@@ -80,7 +77,6 @@ function exportAsSVG(chartId) {
     imgElement.setAttributeNS(null, 'height', height);
     imgElement.setAttributeNS("http://www.w3.org/1999/xlink", 'href', img.src);
     svg.appendChild(imgElement);
-    // Serialize the SVG to a string and return it
     const svgString = new XMLSerializer().serializeToString(svg);
     const blob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
     const url = URL.createObjectURL(blob);
@@ -105,7 +101,6 @@ function exportAsCSV(dataUrl, labelName) {
             }
             const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
             const url = URL.createObjectURL(blob);
-            // Create a link to download the Blob as a CSV file
             const link = document.createElement('a');
             link.setAttribute('href', url);
             link.setAttribute('download', labelName + '.csv');
