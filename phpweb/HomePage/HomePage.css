@@ -23,31 +23,56 @@ a {
 
 @media (min-width: 1201px) {
 
+    .exportbuttons{
+        display:flex;
+        justify-content: space-evenly;
+        width:15vw;
+        margin-top: 1vw;
+
+    }
+    .exportbuttons button{
+        text-decoration: none;
+        border: none;
+        background-color: #D81E5B ;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        margin-left:10px;
+    }
+    .exportbuttons button:hover{
+        background-color: white;
+        color: #D81E5B;
+        cursor: pointer;
+    }
+
     .Statistics h2 {
         margin-left: 1.5vw;
         margin-top: 1.5vw;
     }
     .Genre {
         height: 35vw;
-        display: grid;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vw;
     }
     
-    .Genre button {
-
-        height: 2vw;
-    }
 
     .Rating {
         height: 50vw;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vw;
     }
 
     .Year {
         height: 45vw;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vw;
+        margin-bottom: 5vw;
     }
 
     .prev,
@@ -138,7 +163,6 @@ a {
     .search-container {
         padding-top: 10px;
         display: flex;
-        align-content: center;
         margin-right: 30px;
     }
 
@@ -150,8 +174,8 @@ a {
     }
 
     .search-btn img {
-        height: 25px;
-        width: 25px;
+        height: 23px;
+        width: 23px;
     }
 
     .search-btn {
@@ -159,8 +183,8 @@ a {
         cursor: pointer;
         background-color: white;
         border: none;
-        border-radius: 0 4px 4px 0;
-        height: 100%;
+        border-radius: 4px;
+        margin-bottom: 13px;
     }
 
     #dropdownButton {
@@ -183,10 +207,9 @@ a {
 
     .dropdownContent {
         display: none;
-        /* Hidden by default */
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.6);
-        min-width: 160px;
+        background-color: rgba(216, 30, 91, 0.6);
+        min-width: 100px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         right: 0;
@@ -198,10 +221,11 @@ a {
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        text-align: center;
     }
 
     .dropdownContent a:hover {
-        background-color: #D81E5B;
+        background-color: rgb(216, 30, 91);
         color: white;
 
     }
@@ -300,6 +324,57 @@ a {
 
 @media (max-width: 1200px) and (min-width: 776px) {
 
+    .exportbuttons{
+        display:flex;
+        justify-content: space-evenly;
+        width:15vw;
+        margin-top: 1vw;
+
+    }
+    .exportbuttons button{
+        text-decoration: none;
+        border: none;
+        background-color: #D81E5B ;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        margin-left:10px;
+    }
+    .exportbuttons button:hover{
+        background-color: white;
+        color: #D81E5B;
+        cursor: pointer;
+    }
+
+    .Statistics h2 {
+        margin-left: 1.5vw;
+        margin-top: 1.5vw;
+    }
+    .Genre {
+        height: 35vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vw;
+    }
+    
+    .Rating {
+        height: 50vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vw;
+    }
+
+    .Year {
+        height: 45vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vw;
+        margin-bottom: 5vw;
+    }
+
     .prev,
     .next {
         position: absolute;
@@ -323,8 +398,6 @@ a {
     .next {
         right: 5px;
     }
-
-
 
     .top {
         justify-content: space-between;
@@ -356,24 +429,53 @@ a {
         cursor: pointer;
     }
 
+    .search {
+        display: flex;
+    }
+
+    .searchanddrop {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 315px;
+    }
+
+    .suggestions {
+        margin-top: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        top: 100%;
+        left: 0;
+        max-width: 100%;
+        z-index: 1;
+    }
+
+    .suggestion-item {
+        padding: 10px;
+        cursor: pointer;
+        max-width: 100%;
+    }
+
+    .suggestion-item:hover {
+        background-color: #D81E5B;
+    }
+
     .search-container {
         padding-top: 10px;
-        padding-bottom: 10px;
         display: flex;
-        align-content: center;
-        padding-right: 25px;
+        margin-right: 30px;
     }
 
     .search-bar {
         width: 300px;
         padding: 5px;
         border: none;
-        border-radius: 4px 0 0 4px;
+        border-radius: 4px;
     }
 
     .search-btn img {
-        height: 25px;
-        width: 25px;
+        height: 23px;
+        width: 23px;
     }
 
     .search-btn {
@@ -381,7 +483,8 @@ a {
         cursor: pointer;
         background-color: white;
         border: none;
-        border-radius: 0 4px 4px 0;
+        border-radius: 4px;
+        margin-bottom: 13px;
     }
 
     #dropdownButton {
@@ -404,10 +507,9 @@ a {
 
     .dropdownContent {
         display: none;
-        /* Hidden by default */
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.6);
-        min-width: 160px;
+        background-color: rgba(216, 30, 91, 0.6);
+        min-width: 100px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         right: 0;
@@ -419,14 +521,14 @@ a {
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        text-align: center;
     }
 
     .dropdownContent a:hover {
-        background-color: #D81E5B;
+        background-color: rgb(216, 30, 91);
         color: white;
 
     }
-
 
 
     .CategoryTitle {
@@ -439,7 +541,7 @@ a {
     .Movies {
         position: relative;
         overflow: hidden;
-        padding: 30px 25px 0 25px;
+        padding: 1.5vw 1.5vw 0 1.5vw;
         font-weight: 600;
     }
 
@@ -451,20 +553,28 @@ a {
         align-items: center;
     }
 
+    .ForYouBar img,
+    .TVShowsBar img,
+    .MoviesBar img {
+        height: 280px;
+        width: 190px;
+        border-radius: 4px 4px 4px 4px;
+        border: 2px solid #D81E5B;
+    }
+
+    .HPbutton {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+        margin-right: 0.79rem;
+    }
+
     .ForYouBar::-webkit-scrollbar,
     .TVShowsBar::-webkit-scrollbar,
     .MoviesBar::-webkit-scrollbar {
         display: none;
-    }
-
-    .ForYouBar img,
-    .TVShowsBar img,
-    .MoviesBar img {
-        height: 200px;
-        border-radius: 4px 4px 4px 4px;
-        margin-right: 1.35%;
-        margin-bottom: 5px;
-        border: 2px solid #D81E5B;
     }
 
     .bottomLine {
@@ -512,6 +622,84 @@ a {
 }
 
 @media (max-width: 775px) and (min-width: 360px) {
+    .exportbuttons{
+        display:flex;
+        justify-content: space-evenly;
+        width:10vw;
+        margin-top: 1vw;
+
+    }
+    .exportbuttons button{
+        text-decoration: none;
+        border: none;
+        background-color: #D81E5B ;
+        color: white;
+        border-radius: 10px;
+        padding: 1vw;
+        margin-left:10px;
+        font-size: 2vw;
+    }
+    .exportbuttons button:hover{
+        background-color: white;
+        color: #D81E5B;
+        cursor: pointer;
+    }
+
+    .Statistics h2 {
+        margin-left: 1.5vw;
+        margin-top: 1.5vw;
+    }
+    .Genre {
+        height: 35vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vw;
+        margin-bottom: 20vw;
+    }
+
+    .Rating {
+        height: 50vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vw;
+        margin-bottom: 20vw;
+    }
+
+    .Year {
+        height: 45vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3vw;
+        margin-bottom: 20vw;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #D81E5B;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+
     .top {
         justify-content: space-between;
         background-color: #D81E5B;
@@ -522,13 +710,12 @@ a {
 
     .btn-container {
         display: flex;
-        width: 500px;
+        width: 300px;
         justify-content: space-evenly;
     }
 
     .btn img {
-        width: 100px;
-        height: 50px;
+        width: 10vw;
     }
 
     .btn {
@@ -538,28 +725,56 @@ a {
         border: none;
         color: white;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 1.5vw;
         cursor: pointer;
+    }
+
+    .search {
+        display: flex;
+    }
+
+    .searchanddrop {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .suggestions {
+        margin-top: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        top: 100%;
+        left: 0;
+        max-width: 100%;
+        z-index: 1;
+    }
+
+    .suggestion-item {
+        padding: 10px;
+        cursor: pointer;
+        max-width: 100%;
+    }
+
+    .suggestion-item:hover {
+        background-color: #D81E5B;
     }
 
     .search-container {
         padding-top: 10px;
-        padding-bottom: 10px;
         display: flex;
-        align-content: center;
-        padding-right: 25px;
+        margin-right: 30px;
     }
 
     .search-bar {
         width: 300px;
         padding: 5px;
         border: none;
-        border-radius: 4px 0 0 4px;
+        border-radius: 4px;
     }
 
     .search-btn img {
-        height: 25px;
-        width: 25px;
+        height: 23px;
+        width: 23px;
     }
 
     .search-btn {
@@ -567,7 +782,8 @@ a {
         cursor: pointer;
         background-color: white;
         border: none;
-        border-radius: 0 4px 4px 0;
+        border-radius: 4px;
+        margin-bottom: 13px;
     }
 
     #dropdownButton {
@@ -590,10 +806,9 @@ a {
 
     .dropdownContent {
         display: none;
-        /* Hidden by default */
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.6);
-        min-width: 160px;
+        background-color: rgba(216, 30, 91, 0.6);
+        min-width: 100px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         right: 0;
@@ -605,56 +820,60 @@ a {
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        text-align: center;
     }
 
     .dropdownContent a:hover {
-        background-color: #D81E5B;
+        background-color: rgb(216, 30, 91);
         color: white;
 
     }
 
-    .ForYou,
-    .TVShows,
-    .Movies {
-        padding: 30px 25px 0 25px;
-        font-weight: 600;
-    }
 
     .CategoryTitle {
         font-family: Montserrat;
         padding-bottom: 15px;
     }
 
+    .ForYou,
+    .TVShows,
+    .Movies {
+        position: relative;
+        overflow: hidden;
+        padding: 1.5vw 1.5vw 0 1.5vw;
+        font-weight: 600;
+    }
+
     .ForYouBar,
     .TVShowsBar,
     .MoviesBar {
         display: flex;
-        justify-content: space-between;
+        transition: transform 0.5s ease;
         align-items: center;
-        overflow-x: auto;
-    }
-
-    .ForYouBar::-webkit-scrollbar {
-        display: none;
-    }
-
-    .TVShowsBar::-webkit-scrollbar {
-        display: none;
-    }
-
-    .MoviesBar::-webkit-scrollbar {
-        display: none;
     }
 
     .ForYouBar img,
     .TVShowsBar img,
     .MoviesBar img {
-        width: 200px;
-        height: 275px;
+        height: 280px;
+        width: 190px;
         border-radius: 4px 4px 4px 4px;
-        margin-right: 10px;
-        margin-bottom: 5px;
         border: 2px solid #D81E5B;
+    }
+
+    .HPbutton {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+        margin-right: 0.79rem;
+    }
+
+    .ForYouBar::-webkit-scrollbar,
+    .TVShowsBar::-webkit-scrollbar,
+    .MoviesBar::-webkit-scrollbar {
+        display: none;
     }
 
     .bottomLine {

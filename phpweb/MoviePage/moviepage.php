@@ -25,6 +25,7 @@ if ($result && $result->num_rows > 0) {
   $duration = $row["duration"];
   $listed_in = $row["listed_in"];
   $cast = $row["cast"];
+  $rating = $row["rating"];
 } else {
   header("Location: ../MoviePage/nomovie.php");
 }
@@ -52,7 +53,6 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MoX</title>
   <link rel="stylesheet" href="../MoviePage/moviepage_styles.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -66,25 +66,24 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
       <button class="btn"><a href="../DisneyPlusShows/DisneyPlusShows.php">Disney+</a></button>
     </div>
     <div class="search-container">
-      <form method="POST" class="search">
-        <div class="searchanddrop">
-          <input id="show_name" name="show_name" class="search-bar" type="text"
-            placeholder="What are you watching today?" autocomplete="off">
-          <div id="suggestions" class="suggestions" style="display: none;"></div>
-        </div>
-        <button class="search-btn" type="submit">
-          <img src="../materials/HomePage/lupa2.png">
-        </button>
-      </form>
+            <form method="POST" class="search">
+                <div class="searchanddrop">
+                    <input id="show_name" name="show_name" class="search-bar" type="text"
+                        placeholder="What are you watching today?" autocomplete="off">
+                    <div id="suggestions" class="suggestions" style="display: none;"></div>
+                </div>
+                <button class="search-btn" type="submit">
+                    <img src="../materials/HomePage/lupa2.png">
+                </button>
+            </form>
 
-      <div>
-        <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
-        <div id="dropdownMenu" class="dropdownContent">
-          <a href="">Acount Details</a>
-          <a href="../LogInPage/logout.php">Log Out</a>
+            <div>
+                <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
+                <div id="dropdownMenu" class="dropdownContent">
+                    <a href="../LogInPage/logout.php">Log Out</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
   </div>
   <div class="movie">
     <h1><?php echo $show_title; ?></h1>
@@ -92,6 +91,7 @@ $show_id = get_show_id($api_key, $show_title, $linktype);
       <p><?php echo $type; ?></p>
       <p><?php echo $release_year; ?></p>
       <p><?php echo $duration; ?></p>
+      <p><?php echo $rating ?></p>
     </div>
 
     <div class="poster_and_trailer">

@@ -52,13 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function exportAsWebP(chartId) {
-    const canvas = document.getElementById(chartId); // Replace with your chart canvas ID
+    const canvas = document.getElementById(chartId);
     const dataURL = canvas.toDataURL('image/webp');
     const link = document.createElement('a');
     link.href = dataURL;
     link.download = chartId + '.webp';
     document.body.appendChild(link);
-    link.click(); // Trigger the download
+    link.click();
     document.body.removeChild(link);
 }
 

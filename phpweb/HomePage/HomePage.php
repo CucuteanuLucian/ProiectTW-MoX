@@ -10,7 +10,6 @@ $user_data = check_login($conn);
 <head>
     <title>MoX</title>
     <link rel="stylesheet" href="../HomePage/HomePage.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas2svg@1.0.22"></script>
 </head>
@@ -43,7 +42,6 @@ $user_data = check_login($conn);
             <div>
                 <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
                 <div id="dropdownMenu" class="dropdownContent">
-                    <a href="">Acount Details</a>
                     <a href="../LogInPage/logout.php">Log Out</a>
                 </div>
             </div>
@@ -85,28 +83,35 @@ $user_data = check_login($conn);
             Statistics:
         </h2>
         <div class="Genre">
-            <canvas id="GenreChart">
-
-            </canvas>
+            <canvas id="GenreChart"></canvas>
+            <div class="exportbuttons">
+            <p>Export as: </p>
             <button onclick="exportAsWebP('GenreChart')">WebP</button>
             <button onclick="exportAsSVG('GenreChart')">SVG</button>
             <button onclick="exportAsCSV('GetGenres.php', 'Genre')">CSV</button>
+            </div>
         </div>
         <div class="Rating">
             <canvas id="RatingChart">
 
             </canvas>
+            <div class="exportbuttons">
+            <p>Export as: </p>
             <button onclick="exportAsWebP('RatingChart')">WebP</button>
             <button onclick="exportAsSVG('RatingChart')">SVG</button>
             <button onclick="exportAsCSV('GetRatings.php', 'Rating')">CSV</button>
+        </div>
         </div>
         <div class="Year">
             <canvas id="YearChart">
 
             </canvas>
+            <div class="exportbuttons">
+            <p>Export as: </p>
             <button onclick="exportAsWebP('YearChart')">WebP</button>
             <button onclick="exportAsSVG('YearChart')">SVG</button>
             <button onclick="exportAsCSV('GetYears.php', 'Year')">CSV</button>
+        </div>
         </div>
 
     </div>

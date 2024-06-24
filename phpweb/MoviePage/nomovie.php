@@ -16,7 +16,6 @@ $api_key = "8ca6c40d2f4e3a85543f56e8c7b0fc2f";
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MoX</title>
   <link rel="stylesheet" href="../MoviePage/moviepage_styles.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -44,7 +43,6 @@ $api_key = "8ca6c40d2f4e3a85543f56e8c7b0fc2f";
       <div>
         <button id="dropdownButton"><?php echo $user_data['username'] ?></button>
         <div id="dropdownMenu" class="dropdownContent">
-          <a href="">Acount Details</a>
           <a href="../LogInPage/logout.php">Log Out</a>
         </div>
       </div>

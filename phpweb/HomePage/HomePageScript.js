@@ -150,24 +150,32 @@ window.onclick = function(event) {
     }
 };
 
-$(document).ready(function(){
-    $('#show_name').on('input', function(){
-        var query = $(this).val();
-        if(query.length > 2){
-            $.ajax({
-                url: '../HomePage/search.php',
-                method: 'POST',
-                data: {query: query},
-                success: function(data){
-                    $('#suggestions').html(data).show();
+document.addEventListener('DOMContentLoaded', function() {
+    var showNameInput = document.getElementById('show_name');
+    var suggestionsBox = document.getElementById('suggestions');
+
+    showNameInput.addEventListener('input', function() {
+        var query = showNameInput.value;
+        if (query.length > 2) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '../HomePage/search.php', true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    suggestionsBox.innerHTML = xhr.responseText;
+                    suggestionsBox.style.display = 'block';
                 }
-            });
+            };
+            xhr.send('query=' + encodeURIComponent(query));
         } else {
-            $('#suggestions').hide();
+            suggestionsBox.style.display = 'none';
         }
     });
-    $(document).on('click', '.suggestion-item', function(){
-        $('#show_name').val($(this).text());
-        $('#suggestions').hide();
+
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('suggestion-item')) {
+            showNameInput.value = event.target.textContent;
+            suggestionsBox.style.display = 'none';
+        }
     });
 });
